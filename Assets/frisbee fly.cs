@@ -9,7 +9,7 @@ public class frisbeefly : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        rb.AddForce(new Vector3(0, 500, 500));
+        rb.AddForce(new Vector3(0, 50, 500));
     }
 
     // Update is called once per frame
@@ -22,8 +22,8 @@ public class frisbeefly : MonoBehaviour
     {
         if(other.gameObject.tag=="Wall")
         {
-            
-            rb.AddForce(Vector3.up*200);
+
+            rb.AddForce(Vector3.up * 20);
         }
         
     }

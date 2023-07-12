@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class killenemybone : MonoBehaviour
 {
+    public int scores;
     // Start is called before the first frame update
  
 
@@ -13,7 +14,7 @@ public class killenemybone : MonoBehaviour
         if (other.gameObject.tag=="Enemy")
         {
             Destroy(other.gameObject);
-
+            scores += 50;
             //eff
             Destroy(this.gameObject);
         }

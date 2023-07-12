@@ -9,7 +9,7 @@ public class bonefly : MonoBehaviour
     void Start()
     {
         rb= GetComponent<Rigidbody>();
-        rb.AddForce(new Vector3(0,500,500));  
+        rb.AddForce(new Vector3(0,0,500)*2.5f);  
     }
 
     // Update is called once per frame
