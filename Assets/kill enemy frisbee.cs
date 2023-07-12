@@ -14,13 +14,15 @@ public class killenemyfrisbee : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision other)
     {
-        if(other.gameObject.tag=="Enemy")
+        if (other.gameObject.tag == "Enemy")
         {
             Destroy(other.gameObject);
             killAmt--;
         }
 
+       
     }
+   
 }
