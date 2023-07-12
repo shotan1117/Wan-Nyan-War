@@ -24,7 +24,7 @@ public class EnemyGenerator : MonoBehaviour
             float x = Random.Range(-25.0f, 25.0f);
             float z = Random.Range(-25.0f, 25.0f);
 
-            Instantiate(DogPBR, new Vector3(x, 2.0f, z), DogPBR.transform.rotation);
+            Instantiate(DogPBR, new Vector3(x, 0.1f, z), DogPBR.transform.rotation);
         }
     }
 }
