@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-//using UnityEngine.Sprite;
-//using UnityEngine.SpriteRenderer;
+using UnityEngine.SceneManagement;
 
 public class EndingManager : MonoBehaviour
 {
@@ -23,6 +22,11 @@ public class EndingManager : MonoBehaviour
         if (Input.GetMouseButtonDown(0)) { this.winnerPlayer = (winnerPlayer + 1) % 2; }
         if (this.winnerPlayer == 0) { image.sprite = sprites[0]; }
         else { image.sprite = sprites[1]; }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            SceneManager.LoadScene("Title");
+        }
     }
 
    
