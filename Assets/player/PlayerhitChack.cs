@@ -26,6 +26,11 @@ public class PlayerhitChack : MonoBehaviour
         if (other.gameObject.tag == "enemy")
         {
             hitchack = true;
-        } 
+        }
+
+        if (other.gameObject.tag == "Shot")
+        {
+            hitchack = true;
+        }
     }
 }
