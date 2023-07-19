@@ -4,9 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - Shot
   - Wall
-  - camera1
-  - camera2
   layers:
   - Default
   - TransparentFX
