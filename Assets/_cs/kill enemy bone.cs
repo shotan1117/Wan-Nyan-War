@@ -5,6 +5,7 @@ using UnityEngine;
 public class killenemybone : MonoBehaviour
 {
     public int scores;
+    public int from;
     // Start is called before the first frame update
  
 
@@ -14,7 +15,17 @@ public class killenemybone : MonoBehaviour
         if (other.gameObject.tag=="Enemy")
         {
             Destroy(other.gameObject);
-            scores += 50;
+            if (from == 1)
+            {
+                int i = PlayerPrefs.GetInt("p1Score");
+                PlayerPrefs.SetInt("p1Score", i + 50);
+
+            }
+            else if (from == 2)
+            {
+                int i = PlayerPrefs.GetInt("p2Score");
+                PlayerPrefs.SetInt("p2Score", i + 50);
+            }
             //eff
             Destroy(this.gameObject);
         }
