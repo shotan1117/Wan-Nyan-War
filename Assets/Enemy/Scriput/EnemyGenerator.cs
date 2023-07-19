@@ -5,8 +5,9 @@ using UnityEngine;
 public class EnemyGenerator : MonoBehaviour
 {
     public GameObject DogPBR;
-    float span = 1.0f;
-    float delta = 0;
+    private float span = 1.0f;
+    private float delta = 0;
+    private int timeCnt = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -17,8 +18,17 @@ public class EnemyGenerator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        this.timeCnt++;
         this.delta += Time.deltaTime;
-        if(this.delta > this.span)
+        if (this.timeCnt >= 0)
+        {
+            this.span = 0.8f;
+        }
+        else if (this.timeCnt >= 500)
+        {
+            this.span = 0.3f;
+        }
+        if (this.delta > this.span)
         {
             this.delta = 0;
             float x = Random.Range(-25.0f, 25.0f);

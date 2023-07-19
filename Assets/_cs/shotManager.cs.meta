@@ -3,7 +3,9 @@ guid: 01033130114268c4e9e2ab3d6f397c46
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - bone: {fileID: 5002076452151649149, guid: aff4843f704db714888f03bda0ad15ab, type: 3}
+  - frisbee: {fileID: 5225046238630619163, guid: 1b20aa6fe0020dd43b6b5fdfe5368bdf, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
