@@ -36,21 +36,21 @@ public class ResultManager : MonoBehaviour
     void Update()
     {
         this.timeCnt++;
-        if(this.timeCnt == 60)
+        if(this.timeCnt == 30)
         {
             txt_point.text = "得点は・・・";
         }
-        if(this.timeCnt == 180)
+        if(this.timeCnt == 90)
         {
             txt_1P.text = "1P";
             txt_2P.text = "2P";
         }
-        if(this.timeCnt ==  300)
+        if(this.timeCnt ==  150)
         {
             txt_1p_point.text = p1_score.ToString();
             txt_2p_point.text = p2_score.ToString();
         }
-        if(this.timeCnt == 420)
+        if(this.timeCnt == 210)
         {
             if(p1_score > p2_score)
             {
@@ -68,7 +68,7 @@ public class ResultManager : MonoBehaviour
                 txt_winner_Player.text = "";
             }
         }
-        if(this.timeCnt > 500)
+        if(this.timeCnt > 270)
         {
             if(Input.GetKeyDown(KeyCode.Space))
             {
