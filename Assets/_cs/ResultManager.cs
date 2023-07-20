@@ -7,8 +7,8 @@ using UnityEngine.SceneManagement;
 
 public class ResultManager : MonoBehaviour
 {
-    public int p1_score = 0;
-    public int p2_score = 0;
+    int p1_score = 0;
+    int p2_score = 0;
     int timeCnt = 0;
     //int cnt = 0;
     Text txt_point;
