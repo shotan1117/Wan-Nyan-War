@@ -22,8 +22,7 @@ public class Controller : MonoBehaviour
 
         foreach (GameObject target in targets)
         {
-            //コンソール画面での確認用コード
-            print(Vector3.Distance(transform.position, target.transform.position));
+            
 
             //このオブジェクト（Enemy）とプレイヤまでの距離を計測
             float tDist = Vector3.Distance(transform.position, target.transform.position);
@@ -63,11 +62,7 @@ public class Controller : MonoBehaviour
         }
     }
 
-    // 当たった時に呼ばれる関数
-    void OnCollisionEnter(Collision collision)
-    {
-        Debug.Log("Hit"); // ログを表示する
-    }
+   
 
     void SwitchOn()
     {

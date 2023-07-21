@@ -9,7 +9,7 @@ public class playerShot : MonoBehaviour
     int playerNo;
     public GameObject Shot;
     private bool hitchack;
-    private int shotcount;
+    private int shotcount=0;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,16 +19,19 @@ public class playerShot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+      
         shotcount++;
         hitchack = player_invincible.invincibleCkack;
         if (!hitchack)
         {
-            if (Input.GetButton("RB" + playerNo))
+           // if (shotcount % 60 == 0)
             {
-               if( shotcount %30 == 0)
+                if (Input.GetButton("RB" + playerNo))
                 {
-                    Debug.Log("a");
-                    Instantiate(Shot,transform.position, Quaternion.identity);
+                    Debug.Log(playerNo);
+                    
+                        Instantiate(Shot, transform.position, Quaternion.identity);
+                    
                 }
             }
         }

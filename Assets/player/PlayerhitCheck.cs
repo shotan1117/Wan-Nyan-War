@@ -2,35 +2,35 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerhitChack : MonoBehaviour
+public class PlayerhitCheck : MonoBehaviour
 {
-    private bool shotHitchack;
-    private bool hitchack;
-    private bool invincibleCkack;
+    private bool shotHitcheck;
+    private bool hitcheck;
+    private bool invincibleCkeck;
     float elapsedTime;
-    public bool Hitchack()
+    public bool Hitcheck()
     {
-        if (hitchack)
+        if (hitcheck)
         {
-            shotHitchack = true;
+            shotHitcheck = true;
         }
         else
         {
-            shotHitchack = false;
+            shotHitcheck = false;
         }
-        hitchack = false;
-        return shotHitchack;
+        hitcheck = false;
+        return shotHitcheck;
     }
     private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.tag == "enemy")
         {
-            hitchack = true;
+            hitcheck = true;
         }
 
         if (other.gameObject.tag == "Shot")
         {
-            hitchack = true;
+            hitcheck = true;
         }
     }
 }

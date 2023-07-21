@@ -11,7 +11,7 @@ public class killenemybone : MonoBehaviour
     private void OnCollisionEnter(Collision other)
 
     {
-        if (other.gameObject.tag=="Enemy")
+        if (other.gameObject.tag=="enemy")
         {
             Destroy(other.gameObject);
             scores += 50;
