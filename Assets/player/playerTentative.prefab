@@ -300,5 +300,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player_invincible: {fileID: 1915345052596169288}
-  playerNo: 1
+  playerNo: 0
   Shot: {fileID: 0}
