@@ -25,9 +25,10 @@ public class playerShot : MonoBehaviour
         {
             if (Input.GetButton("RB" + playerNo))
             {
-               if( shotcount %10 == 0)
+               if( shotcount %30 == 0)
                 {
-                    Instantiate(Shot);
+                    Debug.Log("a");
+                    Instantiate(Shot,transform.position, Quaternion.identity);
                 }
             }
         }
