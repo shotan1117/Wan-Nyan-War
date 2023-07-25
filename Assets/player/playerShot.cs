@@ -10,10 +10,11 @@ public class playerShot : MonoBehaviour
     public GameObject Shot;
     private bool hitchack;
     private float shotcount;
+    Rigidbody shotRb;
     // Start is called before the first frame update
     void Start()
     {
-        
+        shotRb = Shot.GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -22,18 +23,16 @@ public class playerShot : MonoBehaviour
       
         shotcount+=Time.deltaTime;
         hitchack = player_invincible.invincibleCkack;
-       // if (!hitchack)
+      //  if (!hitchack)
         {
-          //  if(shotcount % 2 ==0)
+           // if(shotcount  ==5)
             {
 
                 string buttonName = "RB" + playerNo;
                 if (Input.GetButtonDown(buttonName))
                 {
-                    Debug.Log("<color=red>fire " + buttonName + "</color>");
-
-                    Debug.Log(playerNo);
-                        Instantiate(Shot, transform.position, Quaternion.identity);                   
+                        Instantiate(Shot, transform.position, Quaternion.identity);
+                   
                 }
             }
         }
