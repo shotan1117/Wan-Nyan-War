@@ -4,25 +4,22 @@ using UnityEngine;
 
 public class bonefly : MonoBehaviour
 {
+    public float shotSpeed;
+    public int playerNo;
     Rigidbody rb;
-    public player1 player1;
     Vector3 v;
     Transform t;
     // Start is called before the first frame update
     void Start()
     {
         rb= GetComponent<Rigidbody>();
-        // GameObject player1 = GameObject.Find("player1");
-       t= GameObject.Find("player1").GetComponent<Transform>();
-       
-
+       t= GameObject.Find("player" + playerNo).GetComponent<Transform>();
+        v = t.forward;
     }
 
     // Update is called once per frame
     void Update()
-    {
-        v = t.forward;
-        rb.AddForce(v * 150f);
-        
+    { 
+        rb.AddForce(v * shotSpeed);  
     }
 }
