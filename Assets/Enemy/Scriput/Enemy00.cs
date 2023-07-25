@@ -58,12 +58,9 @@ public class Controller : MonoBehaviour
                 transform.LookAt(closePlayer.transform.position);
                 agent.destination = transform.position;
             }
-            
         }
+        
     }
-
-   
-
     void SwitchOn()
     {
         isSwitch = true;

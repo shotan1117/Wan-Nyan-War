@@ -27,5 +27,9 @@ public class player_invincible : MonoBehaviour
             invincibleCkack = false;
               elapsedTime = 0;
         }
+<<<<<<< HEAD
+=======
+        //Debug.Log(invincibleCkack);
+>>>>>>> f7eed096ddd5c3d6637e3b315416f759c1fffff0
     }
 }
