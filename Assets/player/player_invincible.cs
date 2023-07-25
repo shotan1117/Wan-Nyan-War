@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class player_invincible : MonoBehaviour
 {
-    public PlayerhitChack PlayerhitChack;
+    public PlayerhitCheck PlayerhitChack;
     public bool invincibleCkack;
     float elapsedTime = 0;
     public int invincibleTime;
@@ -12,7 +12,7 @@ public class player_invincible : MonoBehaviour
     private bool ishitChack;
     void Update()
     {
-        ishitChack = PlayerhitChack.Hitchack();
+        ishitChack = PlayerhitChack.Hitcheck();
         if(ishitChack)
         {  
             invincibleCkack = true;          
