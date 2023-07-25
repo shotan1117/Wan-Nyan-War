@@ -19,11 +19,12 @@ public class EnemyCheckHit : MonoBehaviour
 
     void OnCollisionEnter(Collision other)
     {
-        Debug.Log("a");
+       
         if (other.gameObject.CompareTag("Shot"))
         {
-           GetComponent<ParticleSystem>().Play();
-            Destroy(gameObject);
+            Debug.Log("a");
+            GetComponent<ParticleSystem>().Play();
+           // Destroy(gameObject);
         }
     }
 }
