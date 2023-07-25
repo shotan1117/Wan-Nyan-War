@@ -13,7 +13,7 @@ public class bonefly : MonoBehaviour
     void Start()
     {
         rb= GetComponent<Rigidbody>();
-       t= GameObject.Find("player" + playerNo).GetComponent<Transform>();
+       t= GameObject.Find("player" + playerNo.ToString()).GetComponent<Transform>();
         v = t.forward;
     }
 
