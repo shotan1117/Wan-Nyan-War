@@ -10,34 +10,6 @@ public class EnemyCheckHit : MonoBehaviour
     private bool invincibleCkack;
     float elapsedTime;
     // Start is called before the first frame update
-   public bool HitCheck()
-    {
-        if (hitcheck)
-        {
-            shotHitcheck = true;
-        }
-        else
-        {
-            shotHitcheck = false;
-        }
-        hitcheck = false;
-        return shotHitcheck;
-    }
-
-
-    private void OnCollisionEnter(Collision other)
-    {
-        if (other.gameObject.tag == "player")
-        {
-            hitcheck = true;
-        }
-
-        if (other.gameObject.tag == "Shot")
-        {
-            hitcheck = true;
-        }
-    }
-
     void Start()
     {
         
@@ -47,5 +19,14 @@ public class EnemyCheckHit : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.tag == "Shot")
+        {
+            GetComponent<ParticleSystem>().Play();
+            Destroy(this.gameObject);
+        }
     }
 }
