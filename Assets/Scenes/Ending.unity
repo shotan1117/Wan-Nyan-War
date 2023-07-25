@@ -716,6 +716,7 @@ MonoBehaviour:
   sprites:
   - {fileID: 21300000, guid: 937da1573803a0941846364ddb89fb84, type: 3}
   - {fileID: 21300000, guid: 8892b1220ceb2b842bf7a87aa5b17327, type: 3}
+  - {fileID: 21300000, guid: d7cd0ca1a5eff7543bab6e3344800b65, type: 3}
 --- !u!4 &1702168844
 Transform:
   m_ObjectHideFlags: 0
