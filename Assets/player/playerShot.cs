@@ -6,32 +6,33 @@ public class playerShot : MonoBehaviour
 {
     public player_invincible player_invincible;
     [SerializeField]
-    int playerNo;
+   private int playerNo;
     public GameObject Shot;
     private bool hitchack;
-    private int shotcount=0;
+    private float shotcount;
+    Rigidbody shotRb;
     // Start is called before the first frame update
     void Start()
     {
-        
+        shotRb = Shot.GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
       
-        shotcount++;
+        shotcount+=Time.deltaTime;
         hitchack = player_invincible.invincibleCkack;
-        if (!hitchack)
+      //  if (!hitchack)
         {
-           // if (shotcount % 60 == 0)
+           // if(shotcount  ==5)
             {
-                if (Input.GetButton("RB" + playerNo))
+
+                string buttonName = "RB" + playerNo;
+                if (Input.GetButtonDown(buttonName))
                 {
-                    Debug.Log(playerNo);
-                    
                         Instantiate(Shot, transform.position, Quaternion.identity);
-                    
+                   
                 }
             }
         }

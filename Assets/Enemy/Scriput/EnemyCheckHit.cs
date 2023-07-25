@@ -5,39 +5,7 @@ using UnityEngine;
 
 public class EnemyCheckHit : MonoBehaviour
 {
-    private bool shotHitcheck;
-    private bool hitcheck;
-    private bool invincibleCkack;
-    float elapsedTime;
     // Start is called before the first frame update
-   public bool HitCheck()
-    {
-        if (hitcheck)
-        {
-            shotHitcheck = true;
-        }
-        else
-        {
-            shotHitcheck = false;
-        }
-        hitcheck = false;
-        return shotHitcheck;
-    }
-
-
-    private void OnCollisionEnter(Collision other)
-    {
-        if (other.gameObject.tag == "player")
-        {
-            hitcheck = true;
-        }
-
-        if (other.gameObject.tag == "Shot")
-        {
-            hitcheck = true;
-        }
-    }
-
     void Start()
     {
         
@@ -47,5 +15,16 @@ public class EnemyCheckHit : MonoBehaviour
     void Update()
     {
         
+    }
+
+    void OnCollisionEnter(Collision other)
+    {
+       
+        if (other.gameObject.CompareTag("Shot"))
+        {
+            Debug.Log("a");
+            GetComponent<ParticleSystem>().Play();
+           // Destroy(gameObject);
+        }
     }
 }
