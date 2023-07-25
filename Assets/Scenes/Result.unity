@@ -659,8 +659,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0daab3ce1c4d7ca4c9a5c9b9a6741d2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  p1_score: 0
-  p2_score: 0
   nyan1: {fileID: 8300000, guid: 83794dbc998ffca45bde623b8a0860eb, type: 3}
   nyan2: {fileID: 8300000, guid: cc79fcc8284a97846abb4076d9f4dedf, type: 3}
   nyan3: {fileID: 8300000, guid: dc56559dd0cc01d4ea3a851e7814b78b, type: 3}
