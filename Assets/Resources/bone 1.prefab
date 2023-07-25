@@ -74,7 +74,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: f6e0c14c5a85f2945b73d1ed3a244e56, type: 2}
     - target: {fileID: 919132149155446097, guid: b0ffc7f801d90f64e845d4958d55274f, type: 3}
       propertyPath: m_Name
-      value: bone
+      value: bone 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b0ffc7f801d90f64e845d4958d55274f, type: 3}
       propertyPath: m_TagString
@@ -101,7 +101,7 @@ PrefabInstance:
       addedObject: {fileID: 7144151823177417578}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b0ffc7f801d90f64e845d4958d55274f, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2790304743363441551}
+      addedObject: {fileID: 7600448368311236217}
   m_SourcePrefab: {fileID: 100100000, guid: b0ffc7f801d90f64e845d4958d55274f, type: 3}
 --- !u!1 &5002076452151649149 stripped
 GameObject:
@@ -193,7 +193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 148a6a15732579c46b06bb0bc52c1469, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2790304743363441551
+--- !u!114 &7600448368311236217
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -205,3 +205,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2da645f162d4f8b4c94a291b41198778, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shotSpeed: 10
+  playerNo: 2

@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 4210228302721680710}
   - component: {fileID: 2583643591259166547}
   - component: {fileID: 2968591256145373200}
-  - component: {fileID: 1460138907275127255}
   - component: {fileID: 1915345052596169288}
   - component: {fileID: 4654955776531557984}
+  - component: {fileID: 1395274086510345213}
   m_Layer: 0
   m_Name: playerTentative
   m_TagString: Player
@@ -137,23 +137,8 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 84
+  m_Constraints: 116
   m_CollisionDetection: 0
---- !u!114 &1460138907275127255
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7038460544633362810}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c65341e4892aca44b5fc781a45e0f89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 8
-  playerNo: 0
-  cameraMan: {fileID: 0}
 --- !u!114 &1915345052596169288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,6 +166,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d6a2c8fe12bfeb45b4f85f7a58a5510, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1395274086510345213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7038460544633362810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c65341e4892aca44b5fc781a45e0f89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 8
+  playerNo: 0
+  cameraMan: {fileID: 0}
 --- !u!1 &7674531599821045255
 GameObject:
   m_ObjectHideFlags: 0
