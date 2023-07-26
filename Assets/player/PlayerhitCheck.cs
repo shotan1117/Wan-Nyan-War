@@ -29,21 +29,11 @@ public class PlayerhitCheck : MonoBehaviour
         {
             hitcheck = true;
         }
-
-        if (other.gameObject.tag == "Shot")
-        {
-            hitcheck = true;
-        }
     }
 
     private void OnCollisionExit(Collision other)
     {
         if (other.gameObject.tag == "enemy")
-        {
-            hitChackExit = true;
-        }
-
-        if (other.gameObject.tag == "Shot")
         {
             hitChackExit = true;
         }
