@@ -58,6 +58,6 @@ public class ScoreManager : MonoBehaviour
 
     private void OnDestroy()
     {
-        instance = null;
+        if (instance == this) instance = null;
     }
 }
