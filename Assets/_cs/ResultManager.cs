@@ -35,8 +35,8 @@ public class ResultManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //p1_score = PlayerPrefs.GetInt("p1Score");
-        //p2_score = PlayerPrefs.GetInt("p2Score");
+        p1_score = ScoreManager.GetP1Score();
+        p2_score = ScoreManager.GetP2Score();
 
         txt_point = GameObject.Find("Canvas").transform.Find("Point").GetComponent<Text>();
         txt_1P = GameObject.Find("Canvas").transform.Find("1P").GetComponent<Text>();
