@@ -14,7 +14,6 @@ public class playerShot : MonoBehaviour
     void Update()
     {
         hitchack = player_invincible.invincibleCkack;
-        Debug.Log(hitchack);
         if (!hitchack)
         {
                 string buttonName = "RB" + playerNo;
