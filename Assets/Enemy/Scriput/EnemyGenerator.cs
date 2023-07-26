@@ -23,13 +23,13 @@ public class EnemyGenerator : MonoBehaviour
             this.delta += Time.deltaTime;
             this.timeCnt += Time.deltaTime;
                       
-            if (this.timeCnt > 30)
+            if (this.timeCnt > 20)
             {
                 this.span = 2.0f;
             }
-            else if (this.timeCnt > 60)
+            else if (this.timeCnt > 40)
             {
-                this.span = 1.0f;
+                this.span = 1.5f;
             }
             if (this.delta > this.span)
             {
@@ -43,7 +43,7 @@ public class EnemyGenerator : MonoBehaviour
                 float x2 = Random.Range(6.0f, 10.0f);
                 float z2 = Random.Range(1.0f, 9.0f);
                 Instantiate(DogPBR, new Vector3(x1, 0.5f, z1), DogPBR.transform.rotation);
-                if (this.timeCnt > 60)
+                if (this.timeCnt > 70)
                 {
                     float x3 = Random.Range(-4.0f, 2.0f);
                     float z3 = Random.Range(-8.0f, 1.0f);
