@@ -209,7 +209,7 @@ RectTransform:
   - {fileID: 5019260375273535509}
   - {fileID: 2738470398018291931}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -359,7 +359,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: -FINISH-
+  m_Text: 
 --- !u!114 &1484195454625463197
 MonoBehaviour:
   m_ObjectHideFlags: 0

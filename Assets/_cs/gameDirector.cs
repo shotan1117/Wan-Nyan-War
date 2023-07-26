@@ -41,7 +41,7 @@ public class gameDirector : MonoBehaviour
         {
             finishTEXT1.finish = true;
 
-            Invoke("ToResult", 5f);
+            Invoke("ToResult", 3f);
         }
     }
 
