@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyGenerator : MonoBehaviour
+public class EnemyGeneratorTutorial : MonoBehaviour
 {
     public GameObject DogPBR;
     private float span = 6.0f;
@@ -22,31 +22,23 @@ public class EnemyGenerator : MonoBehaviour
         {
             this.delta += Time.deltaTime;
             this.timeCnt += Time.deltaTime;
-                      
+
             if (this.timeCnt > 30)
             {
-                this.span = 3.0f;
+                this.span = 4.5f;
             }
             else if (this.timeCnt > 60)
             {
-                this.span = 1.0f;
+                this.span = 2.0f;
             }
             if (this.delta > this.span)
             {
                 this.delta = 0;
-                float x = Random.Range(2.0f, 8.0f);
-                float z = Random.Range(-14.5f, -16.5f);
+                float x = Random.Range(-6.0f, 12.0f);
+                float z = Random.Range(-16.0f, -19.0f);
                 Instantiate(DogPBR, new Vector3(x, 0.5f, z), DogPBR.transform.rotation);
-                float x1 = Random.Range(6.0f, 10.0f);
-                float z1 = Random.Range(1.0f, 9.0f);
-                Instantiate(DogPBR, new Vector3(x1, 0.5f, z1), DogPBR.transform.rotation);
-                if(this.timeCnt > 60)
-                {
-                    float x2 = Random.Range(-4.0f, 2.0f);
-                    float z2 = Random.Range(-8.0f, 1.0f);
-                    Instantiate(DogPBR, new Vector3(x2, 0.5f, z2), DogPBR.transform.rotation);
-                }
             }
         }
     }
 }
+
