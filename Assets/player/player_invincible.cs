@@ -24,7 +24,6 @@ public class player_invincible : MonoBehaviour
         }
         if (elapsedTime >= invincibleTime)
         {
-            Debug.Log("a");
             invincibleCkack = false;
               elapsedTime = 0;
         }
