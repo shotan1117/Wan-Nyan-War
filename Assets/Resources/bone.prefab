@@ -206,4 +206,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shotSpeed: 10
-  playerNo: 1
+  playerNo: 2
