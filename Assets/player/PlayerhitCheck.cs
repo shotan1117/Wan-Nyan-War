@@ -9,7 +9,6 @@ public class PlayerhitCheck : MonoBehaviour
     private bool hitChackExit;
     public bool Hitcheck()
     {
-        Debug.Log(shotHitcheck);
         if (hitcheck)
         {
             shotHitcheck = true;
