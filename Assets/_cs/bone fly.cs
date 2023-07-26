@@ -20,6 +20,11 @@ public class bonefly : MonoBehaviour
     // Update is called once per frame
     void Update()
     { 
-        rb.AddForce(v * shotSpeed);  
+        //rb.AddForce(v * shotSpeed);  
+    }
+
+    private void FixedUpdate()
+    {
+        rb.AddForce(v * shotSpeed);
     }
 }

@@ -169,6 +169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scores: 0
+  from: 1
 --- !u!114 &-6931472485634201476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -205,5 +206,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2da645f162d4f8b4c94a291b41198778, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shotSpeed: 10
+  shotSpeed: 500
   playerNo: 1
