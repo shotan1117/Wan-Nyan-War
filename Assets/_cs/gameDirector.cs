@@ -5,9 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class gameDirector : MonoBehaviour
 {
-     float wave1 =5;
-     float wave2 =5;
-     float wave3 =5;
+    float wave1 = 20;
+    float wave2 = 20;
+    float wave3 = 30;
+   
    public static float timeCnt;
     public static int waveCnt;
     // Start is called before the first frame update
@@ -39,6 +40,7 @@ public class gameDirector : MonoBehaviour
 
         if(wave3 <= 0)
         {
+            wave3 = 0; 
             finishTEXT1.finish = true;
 
             Invoke("ToResult", 3f);
