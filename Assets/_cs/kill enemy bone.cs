@@ -16,14 +16,11 @@ public class killenemybone : MonoBehaviour
         {
             if (from == 1)
             {
-                int i = PlayerPrefs.GetInt("p1Score");
-                PlayerPrefs.SetInt("p1Score", i + 50);
-
+                ScoreManager.AddP1Score(50);
             }
             else if (from == 2)
             {
-                int i = PlayerPrefs.GetInt("p2Score");
-                PlayerPrefs.SetInt("p2Score", i + 50);
+                ScoreManager.AddP2Score(50);
             }
             Destroy(this.gameObject);
             

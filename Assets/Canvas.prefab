@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5019260375273535509}
   - component: {fileID: 1728934708615589310}
   - component: {fileID: 8126807183397190095}
+  - component: {fileID: 7618686898664211049}
   m_Layer: 5
   m_Name: p2
   m_TagString: Untagged
@@ -80,6 +81,18 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "p2:0\u70B9"
+--- !u!114 &7618686898664211049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1385537896423146736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 236d3e1ffb173b04d9485f95a8467efb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3172080221607963766
 GameObject:
   m_ObjectHideFlags: 0
@@ -209,7 +222,7 @@ RectTransform:
   - {fileID: 5019260375273535509}
   - {fileID: 2738470398018291931}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -290,7 +303,6 @@ GameObject:
   - component: {fileID: 2738470398018291931}
   - component: {fileID: 3431777224729124742}
   - component: {fileID: 3633516318804544017}
-  - component: {fileID: 1484195454625463197}
   m_Layer: 5
   m_Name: finish
   m_TagString: Untagged
@@ -360,18 +372,6 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 
---- !u!114 &1484195454625463197
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5566709630591836113}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab8bb76cd995ecd499970e3c63784529, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &8846983437689765594
 GameObject:
   m_ObjectHideFlags: 0
@@ -383,6 +383,7 @@ GameObject:
   - component: {fileID: 8638778616389195529}
   - component: {fileID: 8030109134004026220}
   - component: {fileID: 2898867783826502898}
+  - component: {fileID: 326332526531678957}
   m_Layer: 5
   m_Name: p1
   m_TagString: Untagged
@@ -452,3 +453,15 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "p1:0\u70B9"
+--- !u!114 &326332526531678957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8846983437689765594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a21b02e4c8a693348896ab85e28ff6b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
