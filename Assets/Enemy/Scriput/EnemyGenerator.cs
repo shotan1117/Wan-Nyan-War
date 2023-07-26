@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyGenerator : MonoBehaviour
 {
     public GameObject DogPBR;
-    private float span = 6.0f;
+    private float span = 4.0f;
     private float delta = 0;
     private float timeCnt = 0;
 
@@ -25,7 +25,7 @@ public class EnemyGenerator : MonoBehaviour
                       
             if (this.timeCnt > 30)
             {
-                this.span = 3.0f;
+                this.span = 2.0f;
             }
             else if (this.timeCnt > 60)
             {
@@ -40,11 +40,14 @@ public class EnemyGenerator : MonoBehaviour
                 float x1 = Random.Range(6.0f, 10.0f);
                 float z1 = Random.Range(1.0f, 9.0f);
                 Instantiate(DogPBR, new Vector3(x1, 0.5f, z1), DogPBR.transform.rotation);
-                if(this.timeCnt > 60)
+                float x2 = Random.Range(6.0f, 10.0f);
+                float z2 = Random.Range(1.0f, 9.0f);
+                Instantiate(DogPBR, new Vector3(x1, 0.5f, z1), DogPBR.transform.rotation);
+                if (this.timeCnt > 60)
                 {
-                    float x2 = Random.Range(-4.0f, 2.0f);
-                    float z2 = Random.Range(-8.0f, 1.0f);
-                    Instantiate(DogPBR, new Vector3(x2, 0.5f, z2), DogPBR.transform.rotation);
+                    float x3 = Random.Range(-4.0f, 2.0f);
+                    float z3 = Random.Range(-8.0f, 1.0f);
+                    Instantiate(DogPBR, new Vector3(x3, 0.5f, z3), DogPBR.transform.rotation);
                 }
             }
         }
