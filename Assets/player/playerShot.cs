@@ -31,6 +31,7 @@ public class playerShot : MonoBehaviour
                 string buttonName = "RB" + playerNo;
                 if (Input.GetButtonDown(buttonName))
                 {
+                    Shot.GetComponent<killenemybone>().from = playerNo;
                         Instantiate(Shot, transform.position, Quaternion.identity);
                    
                 }
