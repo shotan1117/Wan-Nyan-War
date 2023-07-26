@@ -18,8 +18,6 @@ public class ResultManager : MonoBehaviour
     public static ResultState resultState = ResultState.None;
     int p1_score = 0;
     int p2_score = 0;
-    float timeCnt = 0;
-    //int cnt = 0;
     Text txt_point;
     Text txt_1P;
     Text txt_2P;
