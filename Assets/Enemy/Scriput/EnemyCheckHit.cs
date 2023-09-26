@@ -25,5 +25,9 @@ public class EnemyCheckHit : MonoBehaviour
             animator.SetBool("Die",true);
            // Destroy(gameObject);
         }
+        if(other.gameObject.CompareTag("Player"))
+        {
+            animator.SetBool("Attack", true);
+        }
     }
 }
