@@ -2581,7 +2581,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 388190dd451a4ce4d88d6e7af3ebe6c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DogPBR: {fileID: 7773906111971832089, guid: 88c7afa4e2240664ab06d67157339e2d, type: 3}
+  DogPBR: {fileID: 2921308039471778828, guid: dbdc97488411514418ce1036d2c00e70, type: 3}
 --- !u!1001 &1138920131
 PrefabInstance:
   m_ObjectHideFlags: 0
