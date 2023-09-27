@@ -20,7 +20,8 @@ public class playerShot : MonoBehaviour
                 if (Input.GetButtonDown(buttonName))
                 {
                     Shot.GetComponent<killenemybone>().from = playerNo;
-                        Instantiate(Shot, transform.position, Quaternion.identity);
+                Vector3 v = new Vector3(0, 0, 0.5f);
+                        Instantiate(Shot, transform.position+v, Quaternion.identity);
                 }
         }
     }

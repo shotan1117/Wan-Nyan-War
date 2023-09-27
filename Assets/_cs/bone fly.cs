@@ -9,6 +9,8 @@ public class bonefly : MonoBehaviour
     Rigidbody rb;
     Vector3 v;
     Transform t;
+    bool forwardFlag = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +27,14 @@ public class bonefly : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.AddForce(v * shotSpeed);
+        if (forwardFlag) rb.AddForce(v * shotSpeed);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "Wall")
+        {
+            forwardFlag = false;
+        }
     }
 }

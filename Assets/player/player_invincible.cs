@@ -10,8 +10,14 @@ public class player_invincible : MonoBehaviour
     public int invincibleTime;
 
     private bool ishitChack;
+
+    float timeCnt=0;
+    void Start()
+    {
+    }
     void Update()
     {
+        //print(elapsedTime);
         ishitChack = PlayerhitChack.Hitcheck();
         if(ishitChack)
         {  
@@ -26,6 +32,29 @@ public class player_invincible : MonoBehaviour
         {
             invincibleCkack = false;
               elapsedTime = 0;
+        }
+       
+        if(elapsedTime >0)
+        {
+            timeCnt += Time.deltaTime;
+            if(timeCnt<=0.5)
+            {
+                transform.localScale = Vector3.one * 0.01f;
+            }
+            else if(timeCnt<=1)
+            {
+                transform.localScale = Vector3.one;
+               
+            }
+            else if (timeCnt>1)
+            {
+                timeCnt = 0;
+            }
+            
+        }
+        else
+        {
+            transform.localScale = Vector3.one;
         }
     }
 }

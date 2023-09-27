@@ -4460,7 +4460,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5019260375273535509, guid: 3ed941fb7986ef043a491dbacaf079aa, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 50
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8638778616389195529, guid: 3ed941fb7986ef043a491dbacaf079aa, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -4468,7 +4468,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8638778616389195529, guid: 3ed941fb7986ef043a491dbacaf079aa, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 50
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1484195454625463197, guid: 3ed941fb7986ef043a491dbacaf079aa, type: 3}
@@ -4818,6 +4818,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2022079518784604365, guid: 568ff86778230214fa50bb92167ae6a6, type: 3}
       propertyPath: m_LocalPosition.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2396689761834247981, guid: 568ff86778230214fa50bb92167ae6a6, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2396689761834247981, guid: 568ff86778230214fa50bb92167ae6a6, type: 3}
+      propertyPath: m_CastShadows
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3227065678958589876, guid: 568ff86778230214fa50bb92167ae6a6, type: 3}
