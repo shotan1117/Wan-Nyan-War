@@ -19,7 +19,7 @@ public class player_invincible : MonoBehaviour
     {
         //print(elapsedTime);
         ishitChack = PlayerhitChack.Hitcheck();
-        if(ishitChack)
+        if(ishitChack && invincibleCkack == false)
         {  
             invincibleCkack = true;          
         }

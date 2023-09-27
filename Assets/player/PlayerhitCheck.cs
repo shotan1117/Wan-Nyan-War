@@ -4,37 +4,46 @@ using UnityEngine;
 
 public class PlayerhitCheck : MonoBehaviour
 {
-    private bool shotHitcheck;
-    private bool hitcheck;
-    private bool hitChackExit;
+    private bool isHit = false;
+    private bool isEnter, isStay, isExit;
     public bool Hitcheck()
     {
-        if (hitcheck)
+        if (isEnter || isStay)
         {
-            shotHitcheck = true;
+            isHit = true;
         }
-        else if(hitChackExit)
+        else if (isExit)
         {
-            shotHitcheck = false;
+            isHit = false;
         }
 
-        hitcheck = false;
-        hitChackExit = false;
-        return shotHitcheck;
+        isEnter = false;
+        isStay = false;
+        isExit = false;
+        return isHit;
     }
+  
     private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.tag == "enemy")
         {
-            hitcheck = true;
+            isEnter = true;
+        }
+    }
+
+    private void OnCollisionStay(Collision other)
+    {
+        if (other.gameObject.tag == "enemy")
+        {
+            isStay = true;
         }
     }
 
     private void OnCollisionExit(Collision other)
-    {
-        if (other.gameObject.tag == "enemy")
+    { 
+       if (other.gameObject.tag == "enemy")
         {
-            hitChackExit = true;
+            isExit = true;
         }
     }
 }
