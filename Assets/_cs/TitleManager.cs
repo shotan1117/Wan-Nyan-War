@@ -12,22 +12,21 @@ public class TitleManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       button = GetComponent<Button>();
+        button = GetComponent<Button>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetButtonDown("Start"))
+        {
+            SceneManager.LoadScene("Game");
+        }
+        if (Input.GetButtonDown("Back"))
+        {
+            SceneManager.LoadScene("Tutorial");
+        }
     }
 
-    public void OnButtonDown_tutorial ()
-    {
-        SceneManager.LoadScene("Tutorial");
-    }
 
-    public void OnButtonDown_Game () 
-    {
-        SceneManager.LoadScene("Game");
-    }
 }
