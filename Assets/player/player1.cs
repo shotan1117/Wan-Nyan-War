@@ -25,6 +25,8 @@ public class player1 : MonoBehaviour
     {
         characterRot = transform.localRotation;
         rb = GetComponent<Rigidbody>();
+        
+        
     }
 
     // Update is called once per frame
