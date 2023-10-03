@@ -4859,7 +4859,8 @@ PrefabInstance:
       propertyPath: BlinkDuration
       value: 0.07
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7784735546632539332, guid: 568ff86778230214fa50bb92167ae6a6, type: 3}
     m_RemovedGameObjects:
     - {fileID: 2223549448341051816, guid: 568ff86778230214fa50bb92167ae6a6, type: 3}
     m_AddedGameObjects:
@@ -4972,7 +4973,8 @@ PrefabInstance:
       propertyPath: playersiderotate
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
     m_RemovedGameObjects:
     - {fileID: 7913221975252619274, guid: 3c2580e6c12d41545824c64232d049ee, type: 3}
     m_AddedGameObjects:

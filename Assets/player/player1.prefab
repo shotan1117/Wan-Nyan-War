@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 5796729740053547422}
   - component: {fileID: 4401603259780791166}
   - component: {fileID: 9160172272222510093}
-  - component: {fileID: 8267482755293202020}
   - component: {fileID: 8511301434121171626}
+  - component: {fileID: 1562034050263541665}
   m_Layer: 0
   m_Name: player1
   m_TagString: Player
@@ -152,21 +152,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78c6e2b78bc46424ab0f61478021d379, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerhitChack: {fileID: 8267482755293202020}
   invincibleCkack: 0
   invincibleTime: 3
---- !u!114 &8267482755293202020
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6954385192955294108}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d6a2c8fe12bfeb45b4f85f7a58a5510, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  BlinkDuration: 0
 --- !u!114 &8511301434121171626
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,6 +171,18 @@ MonoBehaviour:
   playerNo: 1
   playersiderotate: 0
   cam: {fileID: 0}
+--- !u!114 &1562034050263541665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6954385192955294108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a7b62398f19efa439309dfab13e2bf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7551037864374365335
 GameObject:
   m_ObjectHideFlags: 0
