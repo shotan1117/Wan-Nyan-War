@@ -19,18 +19,18 @@ public class getCoin : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag =="Coin")
-        {
-            if(p.GetPlayerNo()==1)
-            {
-                ScoreManager.AddP1Score(1);
-            }
-            else if(p.GetPlayerNo() == 2)
-            {
-                ScoreManager.AddP2Score(1);
-            }
+        //if (other.gameObject.tag =="Coin")
+        //{
+        //    if(p.GetPlayerNo()==1)
+        //    {
+        //        ScoreManager.AddP1Score(1);
+        //    }
+        //    else if(p.GetPlayerNo() == 2)
+        //    {
+        //        ScoreManager.AddP2Score(1);
+        //    }
             
-            Destroy(other.gameObject);
-        }
+        //    Destroy(other.gameObject);
+        //}
     }
 }
