@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class player_invincible : MonoBehaviour
 {
-    public bool invincibleCkack;
+    private bool invincibleCkack;
     float elapsedTime = 0;
     public int invincibleTime;
     public float BlinkDuration;
     float blinkTime;
     private Renderer[] mrList;
 
-    float timeCnt=0;
+    [SerializeField]
+    private float playerNo;
     void Start()
     {
          mrList = GetComponentsInChildren<Renderer>();
@@ -60,6 +61,36 @@ public class player_invincible : MonoBehaviour
         if (other.gameObject.tag == "enemy")
         {            
                 Damage();
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Coin" && !invincibleCkack)
+        {
+
+            if (playerNo == 1)
+            {
+                ScoreManager.AddP1Score(1);
+            }
+            else if (playerNo == 2)
+            {
+                ScoreManager.AddP2Score(1);
+            }
+            Destroy(other.gameObject);
+        }
+
+        if (other.gameObject.tag == "Shot")
+        {
+
+            if (playerNo == 1)
+            {
+                ScoreManager.MinusP1Score(1);
+            }
+            else if (playerNo == 2)
+            {
+                ScoreManager.MinusP2Score(1);
+            }
         }
     }
 }
