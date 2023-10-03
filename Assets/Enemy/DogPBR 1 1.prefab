@@ -823,6 +823,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49f2483c8372abc4890b915c3268aba1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin: {fileID: 4619833973866539046, guid: 00e87f95956430d48a3ee85683e98d71, type: 3}
 --- !u!198 &921389687555440192
 ParticleSystem:
   m_ObjectHideFlags: 0

@@ -26,6 +26,19 @@ public class ScoreManager : MonoBehaviour
         if (instance == null) return;
         instance.scoreP2 += score;
     }
+
+    public static  void MinusP1Score( int score )
+    {
+        if (instance == null) return;
+        instance.scoreP1 -= score;
+
+    }
+    public static void MinusP2Score(int score)
+    {
+        if (instance == null) return;
+        instance.scoreP2 -= score;
+
+    }
     public static int GetP1Score()
     {
         if (instance == null) return 0;
