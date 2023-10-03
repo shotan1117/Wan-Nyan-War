@@ -22,12 +22,14 @@ public class killenemybone : MonoBehaviour
             {
                 ScoreManager.AddP2Score(50);
             }
-            Destroy(this.gameObject);
+          
             
         }
-        
 
-       
+      
+            Destroy(this.gameObject);
+
+
 
     }
 }

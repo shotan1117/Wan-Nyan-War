@@ -4855,6 +4855,10 @@ PrefabInstance:
       propertyPath: playersiderotate
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 9160172272222510093, guid: 568ff86778230214fa50bb92167ae6a6, type: 3}
+      propertyPath: BlinkDuration
+      value: 0.07
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 2223549448341051816, guid: 568ff86778230214fa50bb92167ae6a6, type: 3}

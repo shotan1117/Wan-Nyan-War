@@ -7,6 +7,13 @@ public class PlayerhitCheck : MonoBehaviour
     private bool shotHitcheck;
     private bool hitcheck;
     private bool hitChackExit;
+
+    player_invincible pi;
+
+    private void Start()
+    {
+        pi = gameObject.GetComponent<player_invincible>();
+    }
     public bool Hitcheck()
     {
         if (hitcheck)
@@ -22,13 +29,7 @@ public class PlayerhitCheck : MonoBehaviour
         hitChackExit = false;
         return shotHitcheck;
     }
-    private void OnCollisionEnter(Collision other)
-    {
-        if (other.gameObject.tag == "enemy")
-        {
-            hitcheck = true;
-        }
-    }
+    
 
     private void OnCollisionExit(Collision other)
     {
