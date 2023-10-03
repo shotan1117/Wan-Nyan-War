@@ -10,7 +10,7 @@ public class player1 : MonoBehaviour
     [SerializeField]
     float speed;
     [SerializeField]
-    int playerNo;
+    public int playerNo;
     public GameObject cameraMan;
     Vector2 move;
     Rigidbody rb;
