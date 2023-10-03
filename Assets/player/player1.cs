@@ -8,39 +8,67 @@ using UnityEngine.UIElements;
 public class player1 : MonoBehaviour
 {
     [SerializeField]
-    float speed;
+    private float speed;
+
     [SerializeField]
-    int playerNo;
-    public GameObject cameraMan;
-    Vector2 move;
-    Rigidbody rb;
-    private Vector3 moveForward;
-    public Vector3 MoveForward
-        {
-        get { return moveForward; }
-        }
-    // 前方を表すベクトルを別途用意する
+    private float playerNo;
+
+    [SerializeField]
+    private float playersiderotate;
+
+    public GameObject cam;
+    Quaternion cameraRot, characterRot;
+    private Rigidbody rb;
+    private Vector2 move;
+
+    //変数の宣言(角度の制限用)
+    float minX = -90f, maxX = 90f;
+
     void Start()
     {
+        cameraRot = cam.transform.localRotation;
+        characterRot = transform.localRotation;
         rb = GetComponent<Rigidbody>();
     }
+
+    // Update is called once per frame
     void Update()
     {
-        move.x = Input.GetAxis("Horizontal" + playerNo);
-        move.y = Input.GetAxis("Vertical" + playerNo);
-    }
-    void FixedUpdate()
-    {
-        // カメラの方向から、X-Z平面の単位ベクトルを取得
-        Vector3 cameraForward = Vector3.Scale(cameraMan.transform.forward, new Vector3(1, 0, 1)).normalized;
+        float xRot = Input.GetAxis("direction" + playerNo) * playersiderotate;
+        //縦方向の視点変更は遅く
+        //float yRot = Input.GetAxis("directions" + playerNO) * playersiderotate * 0.5f;
+        move.x = Input.GetAxis("Horizontal" + playerNo) * speed;
+        move.y = Input.GetAxis("Vertical" + playerNo) * speed;
 
-        // 方向キーの入力値とカメラの向きから、移動方向を決定
-         moveForward = cameraForward * move.y + cameraMan.transform.right * move.x;
-        rb.velocity = moveForward * speed + new Vector3(0, rb.velocity.y, 0);
-        // キャラクターの向きを進行方向に
-        if (moveForward != Vector3.zero)
-        {
-            transform.rotation = Quaternion.LookRotation(moveForward);
-        }
+        // cameraRot *= Quaternion.Euler(-yRot, 0, 0);
+        characterRot *= Quaternion.Euler(0, xRot, 0);
+
+        //Updateの中で作成した関数を呼ぶ
+        //cameraRot = ClampRotation(cameraRot);
+        //cam.transform.localRotation = cameraRot;
+        transform.localRotation = characterRot;
+    }
+
+    private void FixedUpdate()
+    {
+        rb.velocity = (transform.right * move.x) + (transform.forward * move.y) + new Vector3(0, rb.velocity.y, 0);
+    }
+
+    //角度制限関数の作成
+    private Quaternion ClampRotation(Quaternion q)
+    {
+        //q = x,y,z,w (x,y,zはベクトル（量と向き）：wはスカラー（座標とは無関係の量）)
+        q.x /= q.w;
+        q.y /= q.w;
+        q.z /= q.w;
+        q.w = 1f;
+
+        float angleX = Mathf.Atan(q.x) * Mathf.Rad2Deg * 2f;
+
+        angleX = Mathf.Clamp(angleX, minX, maxX);
+
+        q.x = Mathf.Tan(angleX * Mathf.Deg2Rad * 0.5f);
+
+        return q;
     }
 }
