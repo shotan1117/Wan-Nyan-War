@@ -27,14 +27,19 @@ public class bonefly : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (forwardFlag) rb.AddForce(v * shotSpeed);
+         rb.AddForce(v * shotSpeed);
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.tag == "Wall")
+
+        if(collision.gameObject.tag == "")
         {
             forwardFlag = false;
+        }
+        else
+        {
+            Destroy(this.gameObject);
         }
     }
 }
