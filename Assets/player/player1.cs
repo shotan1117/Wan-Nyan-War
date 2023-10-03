@@ -13,6 +13,8 @@ public class player1 : MonoBehaviour
     [SerializeField]
     private float playerNo;
 
+    public int GetPlayerNo() { return (int)playerNo; }
+
     [SerializeField]
     private float playersiderotate;
 

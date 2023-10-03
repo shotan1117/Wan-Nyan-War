@@ -21,11 +21,11 @@ public class getCoin : MonoBehaviour
     {
         if (other.gameObject.tag =="Coin")
         {
-            if(p.playerNo==1)
+            if(p.GetPlayerNo()==1)
             {
                 ScoreManager.AddP1Score(1);
             }
-            else if(p.playerNo==2)
+            else if(p.GetPlayerNo() == 2)
             {
                 ScoreManager.AddP2Score(1);
             }
