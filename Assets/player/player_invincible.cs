@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class player_invincible : MonoBehaviour
 {
-    private bool invincibleCkack;
+    public bool invincibleCkack;
     float elapsedTime = 0;
     public int invincibleTime;
     public float BlinkDuration;
@@ -88,7 +88,7 @@ public class player_invincible : MonoBehaviour
                 ScoreManager.MinusP1Score(1);
                 for(int i = 0; i < 3; ++i)
                 {
-                    ScoreManager.scoreP1
+                    //ScoreManager.scoreP1
                 }
             }
             else if (playerNo == 2)
