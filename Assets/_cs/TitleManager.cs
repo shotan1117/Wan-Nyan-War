@@ -9,6 +9,12 @@ public class TitleManager : MonoBehaviour
 {
     Button button;
     public GameObject title;
+
+    public GameObject tutorial;
+    public GameObject game;
+
+    private double time_;
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +24,10 @@ public class TitleManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        time_ += Time.deltaTime;
+
+
+
         if (Input.GetButtonDown("Start"))
         {
             SceneManager.LoadScene("Game");
