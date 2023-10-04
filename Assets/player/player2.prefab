@@ -152,9 +152,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78c6e2b78bc46424ab0f61478021d379, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerhitChack: {fileID: 1362700068087403088}
   invincibleCkack: 0
   invincibleTime: 3
+  BlinkDuration: 0
+  playerNo: 0
 --- !u!114 &1362700068087403088
 MonoBehaviour:
   m_ObjectHideFlags: 0

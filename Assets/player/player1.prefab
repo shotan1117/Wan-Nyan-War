@@ -152,9 +152,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78c6e2b78bc46424ab0f61478021d379, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerhitChack: {fileID: 8267482755293202020}
   invincibleCkack: 0
   invincibleTime: 3
+  BlinkDuration: 0
+  playerNo: 0
 --- !u!114 &8267482755293202020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -210,7 +211,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7551037864374365335}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.3, z: 1}
+  m_LocalPosition: {x: 0.5, y: 0.3, z: 1}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
