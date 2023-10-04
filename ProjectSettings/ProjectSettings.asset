@@ -771,7 +771,7 @@ PlayerSettings:
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
   metroPackageName: Wan-Nyan-War
-  metroPackageVersion: 
+  metroPackageVersion: 1.0.0.0
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
@@ -779,7 +779,7 @@ PlayerSettings:
   metroCertificateNotAfter: 0000000000000000
   metroApplicationDescription: Wan-Nyan-War
   wsaImages: {}
-  metroTileShortName: 
+  metroTileShortName: Wan-Nyan-War
   metroTileShowName: 0
   metroMediumTileShowName: 0
   metroLargeTileShowName: 0
