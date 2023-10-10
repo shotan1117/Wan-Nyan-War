@@ -12,12 +12,16 @@ public class player_invincible : MonoBehaviour
     private Renderer[] mrList;
     public GameObject coin;
     private int coinGenerate;
+    private int scoredecrease = 3;
 
     [SerializeField]
     private int playerNo;
+
+    AudioSource playerAudioSource;
     void Start()
     {
          mrList = GetComponentsInChildren<Renderer>();
+        playerAudioSource = GetComponent<AudioSource>();
     }
 
     private void Damage()
@@ -32,28 +36,28 @@ public class player_invincible : MonoBehaviour
         if (playerNo == 1)
         {
             
-            if (ScoreManager.GetP1Score() > 3)
+            if (ScoreManager.GetP1Score() >= scoredecrease)
             {
-                coinGenerate = 3;
+                coinGenerate = scoredecrease;
             }
             else
             {
                 coinGenerate = ScoreManager.GetP1Score();
             }
-            ScoreManager.MinusP1Score(3);
+            ScoreManager.MinusP1Score(scoredecrease);
         }
         else if (playerNo == 2)
         {
            
-            if (ScoreManager.GetP2Score() > 3)
+            if (ScoreManager.GetP2Score() > scoredecrease)
             {
-                coinGenerate = 3;
+                coinGenerate = scoredecrease;   
             }
             else
             {
                 coinGenerate = ScoreManager.GetP2Score();
             }
-            ScoreManager.MinusP2Score(3);
+            ScoreManager.MinusP2Score(scoredecrease);
         }
         for (int i = 0; i < coinGenerate; i++)
         {
@@ -108,6 +112,8 @@ public class player_invincible : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+
+        playerAudioSource.Play();
         if (other.gameObject.tag == "Coin" && invincibleCkack == false)
         {
             if (playerNo == 1)
