@@ -13,9 +13,13 @@ public class player_invincible : MonoBehaviour
 
     [SerializeField]
     private float playerNo;
+
+
+    AudioSource playerAudio;
     void Start()
     {
          mrList = GetComponentsInChildren<Renderer>();
+        playerAudio = GetComponent<AudioSource>();
     }
 
     public void Damage()
@@ -65,7 +69,9 @@ public class player_invincible : MonoBehaviour
 
         if (other.gameObject.tag == "Coin" && !invincibleCkack)
         {
-            Debug.Log("a");
+
+            playerAudio.Play();
+            
             if (playerNo == 1)
             {
                 Debug.Log("1");
