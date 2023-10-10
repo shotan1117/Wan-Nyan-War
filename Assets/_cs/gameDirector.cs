@@ -5,9 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class gameDirector : MonoBehaviour
 {
-    float wave1 = 20;
-    float wave2 = 20;
-    float wave3 = 30;
+  
+    public float wave1 = 20;
+    public float wave2 = 20;
+    public float wave3 = 30;
    
    public static float timeCnt;
     public static int waveCnt;
