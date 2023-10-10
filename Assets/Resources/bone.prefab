@@ -170,6 +170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scores: 0
   from: 0
+  efffff: {fileID: 3621947816844810718, guid: d0a3bfa2c266efd4da170d713a18607a, type: 3}
 --- !u!114 &-6931472485634201476
 MonoBehaviour:
   m_ObjectHideFlags: 0
