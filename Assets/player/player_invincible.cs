@@ -7,7 +7,7 @@ public class player_invincible : MonoBehaviour
     public bool invincibleCkack;
     float elapsedTime = 0;
     public int invincibleTime;
-    public float BlinkDuration;
+    private float BlinkDuration;
     float blinkTime;
     private Renderer[] mrList;
 
@@ -65,13 +65,15 @@ public class player_invincible : MonoBehaviour
 
         if (other.gameObject.tag == "Coin" && !invincibleCkack)
         {
-
+            Debug.Log("a");
             if (playerNo == 1)
             {
+                Debug.Log("1");
                 ScoreManager.AddP1Score(1);
             }
             else if (playerNo == 2)
             {
+                Debug.Log("2");
                 ScoreManager.AddP2Score(1);
             }
             Destroy(other.gameObject);
@@ -79,7 +81,6 @@ public class player_invincible : MonoBehaviour
 
         if (other.gameObject.tag == "Shot")
         {
-            Debug.Log("a");
             if (playerNo == 1)
             {
                 ScoreManager.MinusP1Score(1);

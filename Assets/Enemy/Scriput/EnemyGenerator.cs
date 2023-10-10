@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyGenerator : MonoBehaviour
 {
     public GameObject DogPBR;
-    private float span = 6.0f;
+    private float span = 4.0f;
     private float delta = 0;
     private float timeCnt = 0;
 
@@ -25,24 +25,24 @@ public class EnemyGenerator : MonoBehaviour
                       
             if (this.timeCnt > 20)
             {
-                this.span = 2.5f;
+                this.span = 2.0f;
             }
             else if (this.timeCnt > 40)
             {
-                this.span = 2.0f;
+                this.span = 1.5f;
             }
             if (this.delta > this.span)
             {
                 this.delta = 0;
-                float x = Random.Range(2.0f, 8.0f);
-                float z = Random.Range(-14.5f, -16.5f);
+                float x = Random.Range(-10.0f, 0.0f);
+                float z = Random.Range(-32.0f, -35.5f);
                 Instantiate(DogPBR, new Vector3(x, 0.5f, z), DogPBR.transform.rotation);
-                float x1 = Random.Range(6.0f, 9.5f);
-                float z1 = Random.Range(1.0f, 9.0f);
+                float x1 = Random.Range(53.0f, 63.0f);
+                float z1 = Random.Range(15.0f, 18.5f);
                 Instantiate(DogPBR, new Vector3(x1, 0.5f, z1), DogPBR.transform.rotation);
-                float x2 = Random.Range(-1.0f, 1.0f);
-                float z2 = Random.Range(-1.0f, 1.0f);
-                Instantiate(DogPBR, new Vector3(x1, 0.5f, z1), DogPBR.transform.rotation);
+                float x2 = Random.Range(-25.0f, 89.0f);
+                float z2 = Random.Range(-3.4f, -10.0f);
+                Instantiate(DogPBR, new Vector3(x2, 0.5f, z2), DogPBR.transform.rotation);
                 if (this.timeCnt > 70)
                 {
                     float x3 = Random.Range(-4.0f, 2.0f);

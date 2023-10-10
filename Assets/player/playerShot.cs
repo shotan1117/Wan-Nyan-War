@@ -23,8 +23,7 @@ public class playerShot : MonoBehaviour
                 if (_time >= 0.2f)
                 {
                     Shot.GetComponent<killenemybone>().from = playerNo;
-                    Vector3 v = new Vector3(0, 0, 0.5f);
-                    Instantiate(Shot, transform.position + v, Quaternion.identity);
+                    Instantiate(Shot, transform.position , Quaternion.identity);
                     _time = 0;
                 }
             }
