@@ -13,7 +13,7 @@ public class killenemybone : MonoBehaviour
     private void OnCollisionEnter(Collision other)
 
     {
-        if (other.gameObject.tag == "enemy")
+        if (other.gameObject.tag == "enemy"||other.gameObject.tag=="Player")
         {
             Instantiate(efffff, transform.position, Quaternion.identity);
         }
