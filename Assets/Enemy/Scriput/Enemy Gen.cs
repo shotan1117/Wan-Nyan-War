@@ -10,6 +10,9 @@ public class EnemyGen : MonoBehaviour
     [Tooltip("生成するGameObject")]
     private GameObject Enemy;
     [SerializeField]
+    [Tooltip("生成するGameObjectボス")]
+    private GameObject Boss;
+    [SerializeField]
     [Tooltip("生成する範囲A")]
     private Transform rangeA;
     [SerializeField]
@@ -30,6 +33,10 @@ public class EnemyGen : MonoBehaviour
 
     // 経過時間
     public  float timeCnt;
+
+    private int GenerateCnt = 0;
+    private int Generatenum = 3;
+
     public gameDirector gameDirector;
     GameObject GD;
 
@@ -49,10 +56,14 @@ public class EnemyGen : MonoBehaviour
 
         // 各waveの半分の時間を超えたら敵が一挙出現する
         // 敵の出現の仕方は0.1秒に1体の頻度で、range～の範囲の座標に出現する
+        //敵の生成間隔
         StartCoroutine(CoEnemyCreate( 0, gameDirector.wave1 / 2, 5, positions[0]));
         StartCoroutine(CoEnemyCreate(gameDirector.wave1, gameDirector.wave2 / 2, 5, positions[1]));
         StartCoroutine(CoEnemyCreate(gameDirector.wave2 + gameDirector.wave1, gameDirector.wave3 / 2, 5, positions[2]));
-
+        //ボスの生成間隔
+        StartCoroutine(CoBossCreate(0, gameDirector.wave1 / 2, 5, positions[0]));
+        StartCoroutine(CoBossCreate(gameDirector.wave1, gameDirector.wave2 / 2, 5, positions[1]));
+        StartCoroutine(CoBossCreate(gameDirector.wave2 + gameDirector.wave1, gameDirector.wave3 / 2, 5, positions[2]));
     }
 
     IEnumerator CoEnemyCreate(float delay, float appearTime, float stopTime, Transform createPos)
@@ -85,6 +96,28 @@ public class EnemyGen : MonoBehaviour
             deltaTime += Time.deltaTime;
             totalTime += Time.deltaTime;
         }
+    }
+
+    IEnumerator CoBossCreate(float delay, float appearTime, float stopTime, Transform createPos)
+    {
+        yield return new WaitForSeconds(delay);
+        yield return new WaitForSeconds(appearTime);
+        while (Generatenum > GenerateCnt)
+        {
+            // createPosを中心に距離と角度を決める
+            float angle = Random.Range(0f, 360f);
+            float dist = Random.Range(0f, enemyCreateRadius);
+            float rad = angle * Mathf.Deg2Rad;
+
+            float x = createPos.position.x + Mathf.Cos(rad) * dist;
+            float y = createPos.position.y;
+            float z = createPos.position.z + Mathf.Sin(rad) * dist;
+
+            // GameObjectを上記で決まったランダムな場所に生成
+            Instantiate(Boss, new Vector3(x, y, z), Boss.transform.rotation);
+            GenerateCnt++;
+        }
+        yield return null;
     }
     
 
