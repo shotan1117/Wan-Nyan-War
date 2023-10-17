@@ -1,5 +1,7 @@
+using Unity;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Build.Content;
 using UnityEngine;
 
 public class BossCheckHit : MonoBehaviour
@@ -28,7 +30,7 @@ public class BossCheckHit : MonoBehaviour
             {
                 DamageCnt += 1;
             }
-            if(DamageCnt >= 100)
+            if(DamageCnt >= 10)
             {
                 Vector3 v = transform.position + transform.up * 5;
 

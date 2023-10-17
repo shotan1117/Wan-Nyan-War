@@ -37,7 +37,7 @@ public class EnemyCheckHit : MonoBehaviour
                 
                 GetComponent<ParticleSystem>().Play();
                 animator.SetBool("Die", true);
-                this.flag = true;
+                flag = true;
               
                 
             }
