@@ -7,6 +7,10 @@ public class playerShot : MonoBehaviour
     public player_invincible player_invincible;
     [SerializeField]
    private int playerNo;
+
+    [SerializeField]
+    private int Speed;
+
     public GameObject Shot;
     public GameObject ShotBom;
     private bool hitchack;
@@ -30,7 +34,10 @@ public class playerShot : MonoBehaviour
             }
             else if(Input.GetButtonDown("LB" + playerNo))
             {
+                GameObject b=
                 Instantiate(ShotBom, transform.position, Quaternion.identity);
+                b.GetComponent<Rigidbody>().velocity = (transform.up*300+transform.forward*300);
+
             }
         }
         
