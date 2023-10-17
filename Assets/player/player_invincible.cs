@@ -119,9 +119,13 @@ public class player_invincible : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (other.gameObject.tag == "Shot" && invincibleCkack == false)
+        {
+            playerAudioSource.PlayOneShot(attacked);
+            Damage();
+        }
 
 
-        
         if (other.gameObject.tag == "Coin" && invincibleCkack == false)
         {
             if (playerNo == 1)
