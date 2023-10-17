@@ -2,24 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class bombactivate : MonoBehaviour
+public class bombdie : MonoBehaviour
 {
-     public GameObject bomb;
     // Start is called before the first frame update
     void Start()
     {
-        
+        Destroy(this.gameObject, 8f);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        bomb.GetComponent<BoxCollider>().enabled = true;
         
     }
 }

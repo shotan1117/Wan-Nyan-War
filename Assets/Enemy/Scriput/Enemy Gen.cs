@@ -85,7 +85,7 @@ public class EnemyGen : MonoBehaviour
                 float rad = angle * Mathf.Deg2Rad;
 
                 float x = createPos.position.x + Mathf.Cos(rad) * dist;
-                float y = createPos.position.y;
+                float y = createPos.position.y + 0.5f;
                 float z = createPos.position.z + Mathf.Sin(rad) * dist;
 
                 // GameObject‚ğã‹L‚ÅŒˆ‚Ü‚Á‚½ƒ‰ƒ“ƒ_ƒ€‚ÈêŠ‚É¶¬
