@@ -27427,6 +27427,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4619833973866539046, guid: 00e87f95956430d48a3ee85683e98d71, type: 3}
     - target: {fileID: 9160172272222510093, guid: 568ff86778230214fa50bb92167ae6a6, type: 3}
+      propertyPath: attacked
+      value: 
+      objectReference: {fileID: 8300000, guid: 9e38b980d792bfb41b1c0838b9075878, type: 3}
+    - target: {fileID: 9160172272222510093, guid: 568ff86778230214fa50bb92167ae6a6, type: 3}
       propertyPath: playerNo
       value: 1
       objectReference: {fileID: 0}
@@ -27531,6 +27535,10 @@ PrefabInstance:
       propertyPath: coin
       value: 
       objectReference: {fileID: 4619833973866539046, guid: 00e87f95956430d48a3ee85683e98d71, type: 3}
+    - target: {fileID: 6469920465632527603, guid: 3c2580e6c12d41545824c64232d049ee, type: 3}
+      propertyPath: attacked
+      value: 
+      objectReference: {fileID: 8300000, guid: 9e38b980d792bfb41b1c0838b9075878, type: 3}
     - target: {fileID: 6469920465632527603, guid: 3c2580e6c12d41545824c64232d049ee, type: 3}
       propertyPath: playerNo
       value: 2
