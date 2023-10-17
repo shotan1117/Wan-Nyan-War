@@ -8,6 +8,7 @@ public class playerShot : MonoBehaviour
     [SerializeField]
    private int playerNo;
     public GameObject Shot;
+    public GameObject ShotBom;
     private bool hitchack;
     private float _time;
 
@@ -27,6 +28,12 @@ public class playerShot : MonoBehaviour
                     _time = 0;
                 }
             }
+            else if(Input.GetButtonDown("LB" + playerNo))
+            {
+                Instantiate(ShotBom, transform.position, Quaternion.identity);
+            }
         }
+        
+
     }
 }
