@@ -6,6 +6,7 @@ public class Enemy01 : MonoBehaviour
 {
     private float chargeTime = 5.0f;
     private float timeCount;
+    private float Enemyspeed;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,10 +16,11 @@ public class Enemy01 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Enemyspeed = Random.Range(1.0f, 5.0f);
         timeCount += Time.deltaTime;
 
         // 自動前進
-        transform.position += transform.forward * Time.deltaTime;
+        transform.position += transform.forward * Time.deltaTime * 2.0f;
 
         // 指定時間の経過（条件）
         if (timeCount > chargeTime)
