@@ -15,4 +15,13 @@ public class bombkillenemy : MonoBehaviour
     {
         
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag=="Player"||
+            other.gameObject.tag=="enemy")
+        {
+
+        }
+    }
 }
