@@ -34,9 +34,9 @@ public class playerShot : MonoBehaviour
             }
             else if(Input.GetButtonDown("LB" + playerNo))
             {
-                GameObject b=
-                Instantiate(ShotBom, transform.position, Quaternion.identity);
-                b.GetComponent<Rigidbody>().velocity = (transform.up*300+transform.forward*300);
+                Vector3 v=transform.position;
+                Instantiate(ShotBom, transform.position+Vector3.up, Quaternion.identity);
+                
 
             }
         }
