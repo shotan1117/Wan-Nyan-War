@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 9039874940698544164}
   - component: {fileID: 1466070352333148229}
   - component: {fileID: 6469920465632527603}
-  - component: {fileID: 1362700068087403088}
   - component: {fileID: 7647084380034678992}
   - component: {fileID: 5687338545720245235}
   m_Layer: 0
@@ -156,19 +155,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   invincibleCkack: 0
   invincibleTime: 3
+  coin: {fileID: 0}
   playerNo: 2
---- !u!114 &1362700068087403088
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 319251568771011632}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d6a2c8fe12bfeb45b4f85f7a58a5510, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  attacked: {fileID: 0}
+  coinGet: {fileID: 0}
 --- !u!114 &7647084380034678992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -379,7 +369,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player_invincible: {fileID: 6469920465632527603}
   playerNo: 2
+  Speed: 0
   Shot: {fileID: 5002076452151649149, guid: aff4843f704db714888f03bda0ad15ab, type: 3}
+  ShotBom: {fileID: 0}
 --- !u!1 &8312972797615227052
 GameObject:
   m_ObjectHideFlags: 0

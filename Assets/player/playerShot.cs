@@ -8,9 +8,6 @@ public class playerShot : MonoBehaviour
     [SerializeField]
    private int playerNo;
 
-    [SerializeField]
-    private int Speed;
-
     public GameObject Shot;
     public GameObject ShotBom;
     private bool hitchack;
