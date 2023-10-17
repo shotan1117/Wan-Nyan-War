@@ -798,7 +798,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 90
   m_CollisionDetection: 0
 --- !u!195 &7670858558340748779
 NavMeshAgent:
@@ -5741,7 +5741,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7c6350c7f6408040a94a27886e2a425, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coin: {fileID: 0}
+  coin: {fileID: 4619833973866539046, guid: 95ad901c38eb85f4790ac4ed6dbc1ca9, type: 3}
 --- !u!1 &3269044261282359407
 GameObject:
   m_ObjectHideFlags: 0
