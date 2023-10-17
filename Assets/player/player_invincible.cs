@@ -20,6 +20,9 @@ public class player_invincible : MonoBehaviour
     AudioSource playerAudioSource;
 
     public AudioClip attacked;
+
+    [SerializeField]
+    private AudioClip coinGet;
     void Start()
     {
          mrList = GetComponentsInChildren<Renderer>();
@@ -117,18 +120,20 @@ public class player_invincible : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
 
-        playerAudioSource.Play();
+
         
         if (other.gameObject.tag == "Coin" && invincibleCkack == false)
         {
             if (playerNo == 1)
             {
                 ScoreManager.AddP1Score(1);
+                playerAudioSource.PlayOneShot(coinGet);
             }
             else if (playerNo == 2)
             {
 
                 ScoreManager.AddP2Score(1);
+                playerAudioSource.PlayOneShot(coinGet);
             }
             Destroy(other.gameObject);
         }
