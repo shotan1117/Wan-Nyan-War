@@ -34547,6 +34547,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1659375175050109915, guid: 568ff86778230214fa50bb92167ae6a6, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2022079518784604365, guid: 568ff86778230214fa50bb92167ae6a6, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.1
@@ -34659,6 +34663,10 @@ PrefabInstance:
       propertyPath: coin
       value: 
       objectReference: {fileID: 4619833973866539046, guid: 00e87f95956430d48a3ee85683e98d71, type: 3}
+    - target: {fileID: 9160172272222510093, guid: 568ff86778230214fa50bb92167ae6a6, type: 3}
+      propertyPath: coinGet
+      value: 
+      objectReference: {fileID: 8300000, guid: 4a9c8f16a967eab45a6896457171f6a3, type: 3}
     - target: {fileID: 9160172272222510093, guid: 568ff86778230214fa50bb92167ae6a6, type: 3}
       propertyPath: playerNo
       value: 1
