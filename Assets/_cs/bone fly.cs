@@ -19,12 +19,6 @@ public class bonefly : MonoBehaviour
         v = t.forward;
     }
 
-    // Update is called once per frame
-    void Update()
-    { 
-        //rb.AddForce(v * shotSpeed);  
-    }
-
     private void FixedUpdate()
     {
         if (forwardFlag) rb.AddForce(v * shotSpeed);

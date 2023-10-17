@@ -222,7 +222,7 @@ Transform:
   - {fileID: 912190968766403176}
   - {fileID: 4273527792578181040}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8485626344610710875
 MonoBehaviour:
@@ -236,10 +236,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 687bd15f2994d334c9f02166fd0073c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Enemy: {fileID: 2921308039471778828, guid: dbdc97488411514418ce1036d2c00e70, type: 3}
+  Enemy: {fileID: 6325718569777796453, guid: 64850e34a60863c498e3b6231fa561de, type: 3}
+  Boss: {fileID: 3182175918724526710, guid: a76dd5d1ded490c4a8527eaba1c2e876, type: 3}
   rangeA: {fileID: 5123313706058928899}
   rangeB: {fileID: 5219387111560984464}
   rangeC: {fileID: 5047917419680306735}
   rangeD: {fileID: 7372221480929946463}
   rangeE: {fileID: 912190968766403176}
   rangeF: {fileID: 4273527792578181040}
+  timeCnt: 0
+  gameDirector: {fileID: 0}
+  enemyCreatePositions:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  enemyCreateRadius: 8
