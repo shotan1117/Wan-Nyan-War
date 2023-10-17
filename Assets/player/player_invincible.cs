@@ -18,6 +18,8 @@ public class player_invincible : MonoBehaviour
     private int playerNo;
 
     AudioSource playerAudioSource;
+
+    public AudioClip attacked;
     void Start()
     {
          mrList = GetComponentsInChildren<Renderer>();
@@ -100,12 +102,14 @@ public class player_invincible : MonoBehaviour
     private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.tag == "enemy" && invincibleCkack ==false)
-        {            
+        {
+            playerAudioSource.PlayOneShot(attacked);
             Damage();
         }
         
         if (other.gameObject.tag == "Shot" && invincibleCkack == false)
         {
+            playerAudioSource.PlayOneShot(attacked);
             Damage();
         }
     }
@@ -114,6 +118,7 @@ public class player_invincible : MonoBehaviour
     {
 
         playerAudioSource.Play();
+        
         if (other.gameObject.tag == "Coin" && invincibleCkack == false)
         {
             if (playerNo == 1)

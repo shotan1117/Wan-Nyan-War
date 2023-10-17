@@ -30,7 +30,7 @@ Transform:
   m_Children:
   - {fileID: 3698158255654999649}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &3952472084805128667
 PrefabInstance:
@@ -46,15 +46,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 398708469006043066, guid: 93477141fe1b9cf41bfcab0e0ce31173, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.14
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 398708469006043066, guid: 93477141fe1b9cf41bfcab0e0ce31173, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.14
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 398708469006043066, guid: 93477141fe1b9cf41bfcab0e0ce31173, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.14
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 398708469006043066, guid: 93477141fe1b9cf41bfcab0e0ce31173, type: 3}
       propertyPath: m_LocalPosition.x
@@ -86,7 +86,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 398708469006043066, guid: 93477141fe1b9cf41bfcab0e0ce31173, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -90
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 398708469006043066, guid: 93477141fe1b9cf41bfcab0e0ce31173, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -98,7 +98,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 398708469006043066, guid: 93477141fe1b9cf41bfcab0e0ce31173, type: 3}
       propertyPath: m_ConstrainProportionsScale
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 933250249464381060, guid: 93477141fe1b9cf41bfcab0e0ce31173, type: 3}
       propertyPath: m_MaxParticleSize
@@ -111,6 +111,14 @@ PrefabInstance:
     - target: {fileID: 4805334037158435949, guid: 93477141fe1b9cf41bfcab0e0ce31173, type: 3}
       propertyPath: m_Name
       value: VFX_Smoke
+      objectReference: {fileID: 0}
+    - target: {fileID: 8266824055581591880, guid: 93477141fe1b9cf41bfcab0e0ce31173, type: 3}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8266824055581591880, guid: 93477141fe1b9cf41bfcab0e0ce31173, type: 3}
+      propertyPath: lengthInSec
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8266824055581591880, guid: 93477141fe1b9cf41bfcab0e0ce31173, type: 3}
       propertyPath: ShapeModule.type
@@ -138,11 +146,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8266824055581591880, guid: 93477141fe1b9cf41bfcab0e0ce31173, type: 3}
       propertyPath: InitialModule.startSpeed.scalar
-      value: 6
+      value: 6.5
       objectReference: {fileID: 0}
     - target: {fileID: 8266824055581591880, guid: 93477141fe1b9cf41bfcab0e0ce31173, type: 3}
       propertyPath: EmissionModule.rateOverTime.scalar
-      value: 100
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 8266824055581591880, guid: 93477141fe1b9cf41bfcab0e0ce31173, type: 3}
       propertyPath: InitialModule.startColor.maxColor.b
