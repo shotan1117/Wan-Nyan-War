@@ -9,20 +9,24 @@ public class playerShot : MonoBehaviour
    private int playerNo;
     public GameObject Shot;
     private bool hitchack;
+    private float _time;
 
     // Update is called once per frame
     void Update()
     {
         hitchack = player_invincible.invincibleCkack;
+        _time += Time.deltaTime;
         if (!hitchack)
         {
-                string buttonName = "RB" + playerNo;
-                if (Input.GetButtonDown(buttonName))
+            if (Input.GetButton("RB" + playerNo))
+            {
+                if (_time >= 0.2f)
                 {
                     Shot.GetComponent<killenemybone>().from = playerNo;
-                Vector3 v = new Vector3(0, 0, 0.5f);
-                        Instantiate(Shot, transform.position+v, Quaternion.identity);
+                    Instantiate(Shot, transform.position , Quaternion.identity);
+                    _time = 0;
                 }
+            }
         }
     }
 }

@@ -12,7 +12,7 @@ public class Controller : MonoBehaviour
     private GameObject closePlayer;
     // Start is called before the first frame update
     void Start()
-    { 
+    {
 
         // タグを使って画面上の全ての敵の情報を取得
         targets = GameObject.FindGameObjectsWithTag("Player");
@@ -22,13 +22,13 @@ public class Controller : MonoBehaviour
 
         foreach (GameObject target in targets)
         {
-            
+
 
             //このオブジェクト（Enemy）とプレイヤまでの距離を計測
             float tDist = Vector3.Distance(transform.position, target.transform.position);
 
             //もしも「初期位置」よりも「計測した敵までの距離」のほうが近いならば
-            if(closeDist > tDist )
+            if (closeDist > tDist)
             {
                 // 「closeDist」を「tDist（その敵までの距離）」に置き換える。
                 // これを繰り返すことで、一番近い敵を見つけ出すことができる。
@@ -45,7 +45,7 @@ public class Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
         if (isSwitch)
         {
             NavMeshAgent agent = GetComponent<NavMeshAgent>();
@@ -59,7 +59,7 @@ public class Controller : MonoBehaviour
                 agent.destination = transform.position;
             }
         }
-        
+
     }
     void SwitchOn()
     {

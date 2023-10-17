@@ -6,28 +6,17 @@ public class killenemybone : MonoBehaviour
 {
     public int scores;
     public int from;
+    public GameObject efffff;
     // Start is called before the first frame update
 
 
     private void OnCollisionEnter(Collision other)
 
     {
-        if (other.gameObject.tag=="enemy")
+        if (other.gameObject.tag == "enemy"||other.gameObject.tag=="Player")
         {
-            if (from == 1)
-            {
-                ScoreManager.AddP1Score(50);
-            }
-            else if (from == 2)
-            {
-                ScoreManager.AddP2Score(50);
-            }
-            Destroy(this.gameObject);
-            
+            Instantiate(efffff, transform.position, Quaternion.identity);
         }
-        
-
-       
-
+        Destroy(this.gameObject);
     }
 }
