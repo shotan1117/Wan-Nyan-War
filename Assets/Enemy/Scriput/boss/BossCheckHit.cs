@@ -8,6 +8,7 @@ public class BossCheckHit : MonoBehaviour
 {
     private bool Checkflag = false;
     private int DamageCnt = 0;
+    private int coinGenerate = 5;
     public GameObject coin;
     Animator animator;
     // Start is called before the first frame update
@@ -29,18 +30,21 @@ public class BossCheckHit : MonoBehaviour
             if(other.gameObject.CompareTag("Shot"))
             {
                 DamageCnt += 1;
+                Debug.Log(DamageCnt);
             }
-            if(DamageCnt >= 10)
+            if (DamageCnt >= 10)
             {
-                Vector3 v = transform.position + transform.up * 5;
-
-
-                GameObject coinn = Instantiate(coin, v, Quaternion.identity);
-                coinn.transform.Rotate(new Vector3(67.941f, 188.771f, 0.638f));
+                for (int i = 0; i < coinGenerate; i++)
+                {
+                    Vector3 v = transform.position+Vector3.up*3;
+                    GameObject coinn = Instantiate(coin, v, Quaternion.identity);
+                    coinn.transform.Rotate(new Vector3(67.941f, 188.771f, 0.638f));
+                }
 
                 GetComponent<ParticleSystem>().Play();
                 animator.SetBool("Die", true);
                 this.Checkflag = true;
+                Debug.Log("Die^^");
             }
         }
     }

@@ -7,7 +7,7 @@ public class player_invincible : MonoBehaviour
     public bool invincibleCkack;
     float elapsedTime = 0;
     public int invincibleTime;
-    private float BlinkDuration;
+    private float BlinkDuration = 0;
     float blinkTime;
     private Renderer[] mrList;
     public GameObject coin;
@@ -66,7 +66,7 @@ public class player_invincible : MonoBehaviour
         }
         for (int i = 0; i < coinGenerate; i++)
         {
-            Vector3 v = transform.position/* + transform.up * 5*/;
+            Vector3 v = transform.position;
             GameObject coinn = Instantiate(coin, v, Quaternion.identity);
             coinn.transform.Rotate(new Vector3(67.941f, 188.771f, 0.638f));
         }
