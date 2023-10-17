@@ -8,8 +8,6 @@ public class Helicopter : MonoBehaviour
     private Transform _target;
     [SerializeField]
     private float _speed;
-    [SerializeField]
-    private float _radius = 0.6f;
     private void Update()
     {        
                 transform.RotateAround(_target.position, transform.up, _speed);
