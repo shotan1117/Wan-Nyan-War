@@ -26,14 +26,10 @@ public class DogCatRunGenerator : MonoBehaviour
     {
         this.time += Time.deltaTime;
         this.addtime += Time.deltaTime;
-        if (this.addtime > 1.0f)
-        {
-            addpos.x = (-this.addtime)*5;
-        }
-
+        
         if (this.time > this.span)
         {
-
+            addpos.x = Random.Range(-5, -1);
             this.time = 0;
             int num = Random.Range(0, 3);
             switch (num)
@@ -57,6 +53,7 @@ public class DogCatRunGenerator : MonoBehaviour
                     }
                     break;
             }
+            Debug.Log(addpos.x);
         }
         if (GameObject.Find("AngryDog(Clone)") != null)
         {
