@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class Helicopter : MonoBehaviour
 {
-    [SerializeField]
-    private Transform _target;
-    [SerializeField]
-    private float _speed;
-    private void Update()
-    {        
-                transform.RotateAround(_target.position, transform.up, _speed);
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
     }
 }
