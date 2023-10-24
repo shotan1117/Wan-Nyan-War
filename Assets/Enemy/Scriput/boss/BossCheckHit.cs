@@ -30,7 +30,6 @@ public class BossCheckHit : MonoBehaviour
             if(other.gameObject.CompareTag("Shot"))
             {
                 DamageCnt += 1;
-                Debug.Log(DamageCnt);
             }
             if (DamageCnt >= 10)
             {
@@ -44,7 +43,6 @@ public class BossCheckHit : MonoBehaviour
                 GetComponent<ParticleSystem>().Play();
                 animator.SetBool("Die", true);
                 this.Checkflag = true;
-                Debug.Log("Die^^");
             }
         }
     }
