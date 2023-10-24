@@ -13,24 +13,6 @@ public class EnemyGen : MonoBehaviour
     [SerializeField]
     [Tooltip("¶¬‚·‚éGameObjectƒ{ƒX")]
     private GameObject Boss;
-    [SerializeField]
-    [Tooltip("¶¬‚·‚é”ÍˆÍA")]
-    private Transform rangeA;
-    [SerializeField]
-    [Tooltip("¶¬‚·‚é”ÍˆÍB")]
-    private Transform rangeB;
-    [SerializeField]
-    [Tooltip("¶¬‚·‚é”ÍˆÍC")]
-    private Transform rangeC;
-    [SerializeField]
-    [Tooltip("¶¬‚·‚é”ÍˆÍD")]
-    private Transform rangeD;
-    [SerializeField]
-    [Tooltip("¶¬‚·‚é”ÍˆÍE")]
-    private Transform rangeE;
-    [SerializeField]
-    [Tooltip("¶¬‚·‚é”ÍˆÍF")]
-    private Transform rangeF;
 
     // Œo‰ßŠÔ
     public  float timeCnt;
