@@ -9,6 +9,23 @@ public class EnemyGenerator : MonoBehaviour
     private float delta = 0;
     private float timeCnt = 0;
 
+    [SerializeField]
+    [Tooltip("¶¬‚·‚éGameObject")]
+    private GameObject createPrefab;
+    [SerializeField]
+    [Tooltip("¶¬‚·‚é”ÍˆÍA")]
+    private Transform rangeA;
+    [SerializeField]
+    [Tooltip("¶¬‚·‚é”ÍˆÍB")]
+    private Transform rangeB;
+    [SerializeField]
+    [Tooltip("¶¬‚·‚é”ÍˆÍC")]
+    private Transform rangeC;
+    [SerializeField]
+    [Tooltip("¶¬‚·‚é”ÍˆÍD")]
+    private Transform rangeD;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,15 +39,7 @@ public class EnemyGenerator : MonoBehaviour
         {
             this.delta += Time.deltaTime;
             this.timeCnt += Time.deltaTime;
-                      
-            if (this.timeCnt > 20)
-            {
-                this.span = 2.0f;
-            }
-            else if (this.timeCnt > 40)
-            {
-                this.span = 1.5f;
-            }
+           
             if (this.delta > this.span)
             {
                 this.delta = 0;
@@ -43,12 +52,7 @@ public class EnemyGenerator : MonoBehaviour
                 float x2 = Random.Range(-25.0f, 89.0f);
                 float z2 = Random.Range(-3.4f, -10.0f);
                 Instantiate(DogPBR, new Vector3(x2, 0.5f, z2), DogPBR.transform.rotation);
-                if (this.timeCnt > 70)
-                {
-                    float x3 = Random.Range(-4.0f, 2.0f);
-                    float z3 = Random.Range(-8.0f, 1.0f);
-                    Instantiate(DogPBR, new Vector3(x3, 0.5f, z3), DogPBR.transform.rotation);
-                }
+               
             }
         }
     }

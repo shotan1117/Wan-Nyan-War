@@ -7,7 +7,7 @@ using UnityEngine;
 public class BossCheckHit : MonoBehaviour
 {
     private bool Checkflag = false;
-    private int DamageCnt = 0;
+    private int BossHP = 0;
     private int coinGenerate = 5;
     public GameObject coin;
     Animator animator;
@@ -29,10 +29,10 @@ public class BossCheckHit : MonoBehaviour
         {
             if(other.gameObject.CompareTag("Shot"))
             {
-                DamageCnt += 1;
-                Debug.Log(DamageCnt);
+                BossHP += 1;
+                Debug.Log(BossHP);
             }
-            if (DamageCnt >= 10)
+            if (BossHP >= 10)
             {
                 for (int i = 0; i < coinGenerate; i++)
                 {

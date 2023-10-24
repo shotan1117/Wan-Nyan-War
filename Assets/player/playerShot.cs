@@ -8,36 +8,38 @@ public class playerShot : MonoBehaviour
     [SerializeField]
    private int playerNo;
 
-    [SerializeField]
-    private int Speed;
-
     public GameObject Shot;
     public GameObject ShotBom;
     private bool hitchack;
-    private float _time;
+    private float Shottime;
+    private float bomTime;
 
     // Update is called once per frame
     void Update()
     {
         hitchack = player_invincible.invincibleCkack;
-        _time += Time.deltaTime;
+        Shottime += Time.deltaTime;
+        bomTime += Time.deltaTime;
         if (!hitchack)
         {
             if (Input.GetButton("RB" + playerNo))
             {
-                if (_time >= 0.2f)
+                if (Shottime >= 0.2f)
                 {
                     Shot.GetComponent<killenemybone>().from = playerNo;
                     Instantiate(Shot, transform.position , Quaternion.identity);
-                    _time = 0;
+                    Shottime = 0;
                 }
             }
             else if(Input.GetButtonDown("LB" + playerNo))
             {
-                GameObject b=
-                Instantiate(ShotBom, transform.position, Quaternion.identity);
-                b.GetComponent<Rigidbody>().velocity = (transform.up*300+transform.forward*300);
-
+                if(bomTime >= 10)
+                {
+                    Instantiate(ShotBom, transform.position + transform.forward, Quaternion.identity);
+                    ShotBom.GetComponent<Rigidbody>().velocity = (transform.up * 300 + transform.forward * 300);
+                    bomTime = 0;
+                }
+                
             }
         }
         
