@@ -53,7 +53,6 @@ public class DogCatRunGenerator : MonoBehaviour
                     }
                     break;
             }
-            Debug.Log(addpos.x);
         }
         if (GameObject.Find("AngryDog(Clone)") != null)
         {

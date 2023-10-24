@@ -21,6 +21,7 @@ public class TitleManager : MonoBehaviour
     {
         if (Input.GetButtonDown("Start"))
         {
+            Debug.Log("a");
             SceneManager.LoadScene("Game");
         }
         if (Input.GetButtonDown("Back"))
