@@ -26,6 +26,7 @@ public class gameDirector : MonoBehaviour
         waveCnt = 1;
         if(wave1 <= 0)
         {
+           
             wave1 = 0;
             wave2-= Time.deltaTime;
             timeCnt=wave2;
@@ -33,6 +34,7 @@ public class gameDirector : MonoBehaviour
         }
         if(wave2 <= 0)
         {
+            
             wave2 = 0;
             wave3-= Time.deltaTime;
             timeCnt=wave3;
@@ -41,8 +43,9 @@ public class gameDirector : MonoBehaviour
 
         if(wave3 <= 0)
         {
-            wave3 = 0; 
-            finishTEXT1.finish = true;
+            wave3 = 0;
+            GameObject.Find("finishText").GetComponent<finishTEXT1>().finish = true;
+            
            
             Invoke("ToResult", 3f);
         }

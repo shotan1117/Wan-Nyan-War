@@ -6,7 +6,7 @@ public class finishTEXT1 : MonoBehaviour
 {
     Text text;
     float timeCnt;
-    public static bool finish;
+    public bool finish;
     // Start is called before the first frame update
     void Start()
     {
