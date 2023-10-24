@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -6,41 +6,35 @@ using UnityEngine.UI;
 
 public class BossHP : MonoBehaviour
 {
-    Animator anim;
-    public UnityEvent onDieCallback = new UnityEvent();
+    public int enemyHP;// 敵の最大HP
+    private int wkHP;  // 敵の現在のHP
+    public Slider hpSlider;     //HPバー
 
-    public int life = 100;
-
-    public Slider hpBar;
+    Animator animator;
 
     void Start()
     {
-        anim = GetComponent<Animator>();
-
-        if (hpBar != null)
-        {
-            hpBar.value = life;
-        }
+        hpSlider.value = (float)enemyHP;//HPバーの最初の値（最大HP）を設定
+        wkHP = enemyHP; // 現在のHPを最大HPに設定
+        animator = GetComponent<Animator>();
     }
-
-    public void Damage(int damage)
+    private void OnTriggerEnter(Collider other)
     {
-        if (life <= 0) return;
-
-        life -= damage;
-        if (hpBar != null)
+        Debug.Log("OnTrriger En");
+        // あたった場合敵を削除
+        if (other.gameObject.CompareTag("Shot"))
         {
-            hpBar.value = life;
-        }
-        if (life <= 0)
-        {
-            OnDie();
-        }
-    }
+            wkHP -= 1;//一度当たるごとに1をマイナス
+            hpSlider.value = (float)wkHP / (float)enemyHP;//スライダは０〜1.0で表現するため最大HPで割って少数点数字に変換
+            // HPが0以下になった場合、自らを消す
+            if (wkHP == 0)
+            {
+                GetComponent<ParticleSystem>().Play();
+                animator.SetBool("Die", true);
+                //Debug.Log("Destroy");
+                Destroy(gameObject, 0f);
+            }
 
-    void OnDie()
-    {
-        anim.SetBool("Die", true);
-        onDieCallback.Invoke();
+        }
     }
 }
