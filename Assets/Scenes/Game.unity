@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4366756, g: 0.48427194, b: 0.5645252, a: 1}
+  m_IndirectSpecularColor: {r: 0.4366768, g: 0.48427147, b: 0.5645225, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -29371,10 +29371,6 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
-    - target: {fileID: 8963353150929294355, guid: 6f1a788f1e6845040baec7341730366b, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8964319730926837432, guid: 6f1a788f1e6845040baec7341730366b, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
@@ -30026,9 +30022,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3758471722911162094, guid: 6f1a788f1e6845040baec7341730366b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 475589844}
-    - targetCorrespondingSourceObject: {fileID: 8859243457798055223, guid: 6f1a788f1e6845040baec7341730366b, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1502446893}
   m_SourcePrefab: {fileID: 100100000, guid: 6f1a788f1e6845040baec7341730366b, type: 3}
 --- !u!1001 &1163893106
 PrefabInstance:
@@ -31701,32 +31694,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1102809583498349190, guid: 87df8fefe7b46d144bf38cecbceb9196, type: 3}
   m_PrefabInstance: {fileID: 1461180953}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1502446891 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8859243457798055223, guid: 6f1a788f1e6845040baec7341730366b, type: 3}
-  m_PrefabInstance: {fileID: 1148054731}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &1502446893
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1502446891}
-  m_Material: {fileID: 13400000, guid: dafd2bc69d376414ca7dfaddd21a0814, type: 2}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 150, y: 0.3, z: 150}
-  m_Center: {x: 25, y: 0.1, z: 0}
 --- !u!1001 &1510631270
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32316,7 +32283,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1620383305}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 72.7, y: 10, z: 15}
+  m_LocalPosition: {x: 72.7, y: 1.5, z: 15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -34215,7 +34182,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1958475238}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.2, y: 10, z: -50.9}
+  m_LocalPosition: {x: -7.2, y: 1.5, z: -50.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -34246,7 +34213,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1969344941}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 32.3, y: 10, z: -18.8}
+  m_LocalPosition: {x: 32.3, y: 1.5, z: -18.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -35253,10 +35220,6 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 1659375175050109915, guid: 568ff86778230214fa50bb92167ae6a6, type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 2022079518784604365, guid: 568ff86778230214fa50bb92167ae6a6, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.1
@@ -35369,10 +35332,6 @@ PrefabInstance:
       propertyPath: coin
       value: 
       objectReference: {fileID: 4619833973866539046, guid: 00e87f95956430d48a3ee85683e98d71, type: 3}
-    - target: {fileID: 9160172272222510093, guid: 568ff86778230214fa50bb92167ae6a6, type: 3}
-      propertyPath: coinGet
-      value: 
-      objectReference: {fileID: 8300000, guid: 4a9c8f16a967eab45a6896457171f6a3, type: 3}
     - target: {fileID: 9160172272222510093, guid: 568ff86778230214fa50bb92167ae6a6, type: 3}
       propertyPath: playerNo
       value: 1

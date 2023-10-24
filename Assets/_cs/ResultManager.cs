@@ -97,13 +97,13 @@ public class ResultManager : MonoBehaviour
 
         while (true)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetButtonDown("Start"))
             {
-                break;
+                SceneManager.LoadScene("Ending");
             }
             yield return null;
         }
 
-        SceneManager.LoadScene("Ending");
+   
     }
 }

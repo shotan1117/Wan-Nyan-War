@@ -31,13 +31,13 @@ public class EndingManager : MonoBehaviour
                 image.sprite = sprites[2];
                 break;
         }
-       
 
-        if (Input.GetKeyDown(KeyCode.Space))
+
+        if (Input.GetButtonDown("Start"))
         {
             SceneManager.LoadScene("Title");
         }
-       
+
     }
 
    
