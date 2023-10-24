@@ -15,7 +15,7 @@ public class gameDirector : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        waveCnt = 1;
     }
 
     // Update is called once per frame
@@ -43,7 +43,7 @@ public class gameDirector : MonoBehaviour
         {
             wave3 = 0; 
             finishTEXT1.finish = true;
-
+           
             Invoke("ToResult", 3f);
         }
     }

@@ -11,9 +11,12 @@ public class TitleManager : MonoBehaviour
 
     public GameObject tutorial;
     public GameObject game;   
+
+  
     // Start is called before the first frame update
     void Start()
     {
+    
     }
 
     // Update is called once per frame
