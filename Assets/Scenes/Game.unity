@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4366756, g: 0.48427194, b: 0.5645252, a: 1}
+  m_IndirectSpecularColor: {r: 0.4366768, g: 0.48427147, b: 0.5645225, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -31109,6 +31109,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0bc07663c568a5a4cb81e9236e6670f5, type: 3}
   m_PrefabInstance: {fileID: 1375859903}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1381653878 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4097077944197755779, guid: 3ed941fb7986ef043a491dbacaf079aa, type: 3}
+  m_PrefabInstance: {fileID: 1942058355}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1429569031
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31247,6 +31252,10 @@ PrefabInstance:
       propertyPath: Enemy
       value: 
       objectReference: {fileID: 6325718569777796453, guid: 64850e34a60863c498e3b6231fa561de, type: 3}
+    - target: {fileID: 8485626344610710875, guid: 87df8fefe7b46d144bf38cecbceb9196, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1381653878}
     - target: {fileID: 8485626344610710875, guid: 87df8fefe7b46d144bf38cecbceb9196, type: 3}
       propertyPath: enemyCreatePositions.Array.size
       value: 3
