@@ -86,7 +86,7 @@ public class EnemyGen : MonoBehaviour
                     GhostArrangement("Logo1", -1500, 300);
                     GhostArrangement("Logo2", -1500, 150);
                 }
-               
+
             }
 
             yield return null;

@@ -6106,6 +6106,32 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1501478452528767407, guid: dc8c2427d4e766843b3b93ad9de149ba, type: 3}
   m_PrefabInstance: {fileID: 876212342}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &888871792 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8859243457798055223, guid: 6f1a788f1e6845040baec7341730366b, type: 3}
+  m_PrefabInstance: {fileID: 1148054731}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &888871794
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 888871792}
+  m_Material: {fileID: 13400000, guid: dafd2bc69d376414ca7dfaddd21a0814, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 150, y: 0.5, z: 150}
+  m_Center: {x: 25, y: 0.02, z: 0}
 --- !u!1001 &900425294
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29598,6 +29624,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3758471722911162094, guid: 6f1a788f1e6845040baec7341730366b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 475589844}
+    - targetCorrespondingSourceObject: {fileID: 8859243457798055223, guid: 6f1a788f1e6845040baec7341730366b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 888871794}
   m_SourcePrefab: {fileID: 100100000, guid: 6f1a788f1e6845040baec7341730366b, type: 3}
 --- !u!1001 &1163893106
 PrefabInstance:
@@ -31166,7 +31195,7 @@ PrefabInstance:
     - target: {fileID: 8485626344610710875, guid: 87df8fefe7b46d144bf38cecbceb9196, type: 3}
       propertyPath: Enemy
       value: 
-      objectReference: {fileID: 6325718569777796453, guid: 64850e34a60863c498e3b6231fa561de, type: 3}
+      objectReference: {fileID: 4400942065880553391, guid: 5945967b75c8a5642828ac2a2e4b324b, type: 3}
     - target: {fileID: 8485626344610710875, guid: 87df8fefe7b46d144bf38cecbceb9196, type: 3}
       propertyPath: canvas
       value: 

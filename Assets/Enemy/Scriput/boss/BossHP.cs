@@ -10,6 +10,9 @@ public class BossHP : MonoBehaviour
     private int wkHP;  // 敵の現在のHP
     public Slider hpSlider;     //HPバー
 
+    public GameObject coin;
+    private int coinGenerate = 5;
+
     Animator animator;
 
     void Start()
@@ -18,21 +21,25 @@ public class BossHP : MonoBehaviour
         wkHP = enemyHP; // 現在のHPを最大HPに設定
         animator = GetComponent<Animator>();
     }
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision other)
     {
         Debug.Log("OnTrriger En");
         // あたった場合敵を削除
         if (other.gameObject.CompareTag("Shot"))
         {
-            wkHP -= 1;//一度当たるごとに1をマイナス
+            wkHP -= 10;//一度当たるごとに1をマイナス
             hpSlider.value = (float)wkHP / (float)enemyHP;//スライダは０〜1.0で表現するため最大HPで割って少数点数字に変換
             // HPが0以下になった場合、自らを消す
             if (wkHP == 0)
             {
+                for (int i = 0; i < coinGenerate; i++)
+                {
+                    Vector3 v = transform.position + Vector3.up * 3;
+                    GameObject coinn = Instantiate(coin, v, Quaternion.identity);
+                    coinn.transform.Rotate(new Vector3(67.941f, 188.771f, 0.638f));
+                }
                 GetComponent<ParticleSystem>().Play();
                 animator.SetBool("Die", true);
-                //Debug.Log("Destroy");
-                Destroy(gameObject, 0f);
             }
 
         }

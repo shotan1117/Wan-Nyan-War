@@ -6477,8 +6477,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca6d943e21b7e3d4089921f31a398149, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyHP: 10
+  enemyHP: 100
   hpSlider: {fileID: 8808938373711275900}
+  coin: {fileID: 4619833973866539046, guid: 95ad901c38eb85f4790ac4ed6dbc1ca9, type: 3}
 --- !u!1 &5068959797260432941
 GameObject:
   m_ObjectHideFlags: 0
@@ -7053,7 +7054,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2462336815365482964}
+  - {fileID: 2462336815365878611}
   m_Father: {fileID: 6744445442123630567}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7814,7 +7815,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ef625d01f79b4e4eb62fcdf032954ca, type: 3}
---- !u!4 &2462336815365482964 stripped
+--- !u!4 &2462336815365878611 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 9ef625d01f79b4e4eb62fcdf032954ca, type: 3}
   m_PrefabInstance: {fileID: 2462336815365482963}
