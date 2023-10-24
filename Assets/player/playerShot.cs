@@ -33,10 +33,10 @@ public class playerShot : MonoBehaviour
             }
             else if(Input.GetButtonDown("LB" + playerNo))
             {
-                if(bomTime >= 10)
+                //if(bomTime >= 10)
                 {
                     Instantiate(ShotBom, transform.position + transform.forward, Quaternion.identity);
-                    ShotBom.GetComponent<Rigidbody>().velocity = (transform.up * 300 + transform.forward * 300);
+                    ShotBom.GetComponent<Rigidbody>().velocity = (this.transform.up * 300 + this.transform.forward * 300);
                     bomTime = 0;
                 }
                 
