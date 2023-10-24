@@ -522,6 +522,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5002076452151649149, guid: aff4843f704db714888f03bda0ad15ab, type: 3}
     - target: {fileID: 6005219300758951918, guid: 665d8e36980a4e14abba2e04964c576d, type: 3}
+      propertyPath: ShotBom
+      value: 
+      objectReference: {fileID: 5065827892774873728, guid: a6de90c136e02a3469aa6978fcdbfd27, type: 3}
+    - target: {fileID: 6005219300758951918, guid: 665d8e36980a4e14abba2e04964c576d, type: 3}
       propertyPath: playerNo
       value: 2
       objectReference: {fileID: 0}
@@ -573,7 +577,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4654955776531557984, guid: 665d8e36980a4e14abba2e04964c576d, type: 3}
     m_RemovedGameObjects:
     - {fileID: 2078085519608256666, guid: 665d8e36980a4e14abba2e04964c576d, type: 3}
     - {fileID: 7452945698893013609, guid: 665d8e36980a4e14abba2e04964c576d, type: 3}
@@ -4707,6 +4712,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5002076452151649149, guid: dba1dd307239d2f4bb4b0d127d0e2715, type: 3}
     - target: {fileID: 6005219300758951918, guid: 665d8e36980a4e14abba2e04964c576d, type: 3}
+      propertyPath: ShotBom
+      value: 
+      objectReference: {fileID: 5065827892774873728, guid: 39abebb89d75eec4893643c4d511e23e, type: 3}
+    - target: {fileID: 6005219300758951918, guid: 665d8e36980a4e14abba2e04964c576d, type: 3}
       propertyPath: playerNo
       value: 1
       objectReference: {fileID: 0}
@@ -4787,6 +4796,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1910225898}
   - component: {fileID: 1910225899}
+  - component: {fileID: 1910225900}
   m_Layer: 0
   m_Name: TutorialManager
   m_TagString: Untagged
@@ -4823,6 +4833,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explain: {fileID: 583826353}
   totitle: {fileID: 1013723503}
+--- !u!114 &1910225900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1910225897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76a662b8c1a7222428ddfb9765b0c0a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: {fileID: 0}
+  tutorial: {fileID: 0}
+  game: {fileID: 0}
 --- !u!1 &2088864875
 GameObject:
   m_ObjectHideFlags: 0

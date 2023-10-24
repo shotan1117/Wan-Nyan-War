@@ -11,6 +11,9 @@ public class TutorialManager : MonoBehaviour
     float time = 0;
     int drawCnt = 0;
 
+    private bool[] Keyinput;
+    private float[] Stickinput;
+
     public Text totitle;
     // Start is called before the first frame update
     void Start()
@@ -31,7 +34,16 @@ public class TutorialManager : MonoBehaviour
     void Update()
     {
         time += Time.deltaTime;
-        if(time >= 5.0f)
+        KeyChack();
+        bool BKey = Input.GetButtonDown("buttonB");
+
+        if (BKey)
+        {
+            explain.text = explainText[drawCnt % cnt];
+            drawCnt++;
+        }
+
+        if (time >= 5.0f)
         {
             time = 0;
             explain.text = explainText[drawCnt%cnt];
@@ -44,5 +56,10 @@ public class TutorialManager : MonoBehaviour
         {
             Initiate.Fade("title", Color.black, 1.0f);
         }
+    }
+
+    private void KeyChack()
+    {       
+        
     }
 }
