@@ -29,6 +29,7 @@ public class BGM : MonoBehaviour
             audioo.Play();
             bgmChange = false;
             bgmChanged = true;
+            Debug.Log("change");
         }
         if (gameDirector.waveCnt == 3 )
         {
