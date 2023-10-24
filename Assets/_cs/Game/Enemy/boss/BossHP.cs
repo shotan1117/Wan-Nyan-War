@@ -23,7 +23,6 @@ public class BossHP : MonoBehaviour
     }
     private void OnCollisionEnter(Collision other)
     {
-        Debug.Log("OnTrriger En");
         // あたった場合敵を削除
         if (other.gameObject.CompareTag("Shot"))
         {
