@@ -27,8 +27,6 @@ public class EnemyGen : MonoBehaviour
 
     public float enemyCreateRadius = 8;
 
-    GameObject image;
-
     public GameObject canvas;
 
     private void Start()
@@ -81,11 +79,11 @@ public class EnemyGen : MonoBehaviour
 
                 Instantiate(Enemy, new Vector3(x, y, z), Enemy.transform.rotation);
 
-                if (GameObject.Find("Logo1(Clone)") == null)
-                {
-                    GhostArrangement("Logo1", -1500, 300);
-                    GhostArrangement("Logo2", -1500, 150);
-                }
+                //if (GameObject.Find("Logo1(Clone)") == null)
+                //{
+                //    GhostArrangement("Logo1", -1500, 300);
+                //    GhostArrangement("Logo2", -1500, 150);
+                //}
 
             }
 
@@ -114,6 +112,7 @@ public class EnemyGen : MonoBehaviour
             Instantiate(Boss, new Vector3(x, y, z), Boss.transform.rotation);
             GenerateCnt++;
         }
+        GenerateCnt = 0;
         yield return null;
     }
 

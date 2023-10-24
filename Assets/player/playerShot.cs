@@ -35,8 +35,7 @@ public class playerShot : MonoBehaviour
             {
                 //if(bomTime >= 10)
                 {
-                    Instantiate(ShotBom, transform.position + transform.forward, Quaternion.identity);
-                    ShotBom.GetComponent<Rigidbody>().velocity = (this.transform.up * 300 + this.transform.forward * 300);
+                    Instantiate(ShotBom, transform.position + transform.forward *2, Quaternion.identity);
                     bomTime = 0;
                 }
                 
