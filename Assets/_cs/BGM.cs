@@ -7,15 +7,20 @@ public class BGM : MonoBehaviour
     AudioSource audioo;
     public AudioClip bgm1;
     public AudioClip bgm2;
-    bool bgmChange=false;
-    bool bgmChanged = false;
+    bool bgmChange;
+    bool bgmChanged;
    
     // Start is called before the first frame update
     void Start()
     {
+        bgmChange = false;
+        bgmChanged = false;
+
         audioo = GetComponent<AudioSource>();
         audioo.clip = bgm1;
         audioo.Play();
+
+        Debug.Log("bgm start");
     }
 
     // Update is called once per frame
@@ -29,6 +34,8 @@ public class BGM : MonoBehaviour
             audioo.Play();
             bgmChange = false;
             bgmChanged = true;
+
+            Debug.Log("bgm change");
         }
         if (gameDirector.waveCnt == 3 )
         {
