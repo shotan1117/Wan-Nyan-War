@@ -79,11 +79,11 @@ public class EnemyGen : MonoBehaviour
 
                 Instantiate(Enemy, new Vector3(x, y, z), Enemy.transform.rotation);
 
-                if (GameObject.Find("Logo1(Clone)") == null)
-                {
-                    GhostArrangement("Logo1", -1500, 300);
-                    GhostArrangement("Logo2", -1500, 150);
-                }
+                //if (GameObject.Find("Logo1(Clone)") == null)
+                //{
+                //    GhostArrangement("Logo1", -1500, 300);
+                //    GhostArrangement("Logo2", -1500, 150);
+                //}
 
             }
 
