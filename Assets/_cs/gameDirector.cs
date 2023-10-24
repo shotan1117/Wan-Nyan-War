@@ -50,6 +50,6 @@ public class gameDirector : MonoBehaviour
 
     private void ToResult ()
     {
-        SceneManager.LoadScene("Result");
+        Initiate.Fade("Result", Color.black, 1.0f);
     }
 }

@@ -35,7 +35,7 @@ public class EndingManager : MonoBehaviour
 
         if (Input.GetButtonDown("Start"))
         {
-            SceneManager.LoadScene("Title");
+            Initiate.Fade("Title", Color.black, 1.0f);
         }
 
     }

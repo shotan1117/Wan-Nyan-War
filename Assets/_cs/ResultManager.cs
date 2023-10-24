@@ -99,7 +99,7 @@ public class ResultManager : MonoBehaviour
         {
             if (Input.GetButtonDown("Start"))
             {
-                SceneManager.LoadScene("Ending");
+                Initiate.Fade("Ending", Color.black, 1.0f);
             }
             yield return null;
         }

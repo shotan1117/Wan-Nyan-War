@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using Unity.VisualScripting;
+using UnityEditor;
 
 public class TitleManager : MonoBehaviour
 {
@@ -24,11 +25,11 @@ public class TitleManager : MonoBehaviour
     {
         if (Input.GetButtonDown("Start"))
         {
-            SceneManager.LoadScene("Game");
+            Initiate.Fade("Game", Color.black, 1.0f);
         }
         if (Input.GetButtonDown("Back"))
         {
-            SceneManager.LoadScene("Tutorial");
+            Initiate.Fade("tutorial", Color.black, 1.0f);
         }
     }
 
