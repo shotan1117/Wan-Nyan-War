@@ -12,11 +12,12 @@ public class playerShot : MonoBehaviour
     public GameObject ShotBom;
     private bool hitchack;
     private float Shottime;
-    private float bomTime;
+    public float bomTime;
 
     // Update is called once per frame
     void Update()
     {
+        
         hitchack = player_invincible.invincibleCkack;
         Shottime += Time.deltaTime;
         bomTime += Time.deltaTime;
@@ -33,7 +34,7 @@ public class playerShot : MonoBehaviour
             }
             else if(Input.GetButtonDown("LB" + playerNo))
             {
-                //if(bomTime >= 10)
+                if (bomTime >= 10)
                 {
                     Instantiate(ShotBom, transform.position + transform.forward *2, Quaternion.identity);
                     bomTime = 0;
@@ -41,7 +42,5 @@ public class playerShot : MonoBehaviour
                 
             }
         }
-        
-
     }
 }
