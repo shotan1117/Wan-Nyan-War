@@ -19,5 +19,6 @@ public class wavetime : MonoBehaviour
     {
         
         text.text = wave + gameDirector.waveCnt + "     "+gameDirector.timeCnt.ToString("00")+"s ";
+        
     }
 }
