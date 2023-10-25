@@ -13,7 +13,8 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: Wan-Nyan-War
+  productName: "2023\u5E74\u5EA6 \u5352\u696D\u5236\u4F5C \u308F\u3093\u306B\u3083\u3093\u5927\u6226\u4E89
+    \u300Camazon-prime\u300D"
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
