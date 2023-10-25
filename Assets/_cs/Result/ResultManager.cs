@@ -25,6 +25,8 @@ public class ResultManager : MonoBehaviour
     Text txt_winner_Player;
     Text txt_1p_point;
     Text txt_2p_point;
+    Text toNext;
+
     AudioSource audioSource;
     public AudioClip nyan1;
     public AudioClip nyan2;
@@ -43,6 +45,7 @@ public class ResultManager : MonoBehaviour
         txt_winner_Player = GameObject.Find("Canvas").transform.Find("Winner_Player").GetComponent<Text>();
         txt_1p_point = GameObject.Find("Canvas").transform.Find("1P_Point").GetComponent<Text>();
         txt_2p_point = GameObject.Find("Canvas").transform.Find("2P_Point").GetComponent<Text>();
+        toNext = GameObject.Find("Canvas").transform.Find("ToNext").GetComponent<Text>();
 
         audioSource = GetComponent<AudioSource>();
 
@@ -91,7 +94,9 @@ public class ResultManager : MonoBehaviour
             txt_winner_Player.text = "";
             resultState = ResultState.Draw;
         }
+        yield return new WaitForSeconds(1.5f);
 
+        toNext.text = "STRAT‚ÅŽŸ‚Ö";
 
         yield return new WaitForSeconds(1f);
 
