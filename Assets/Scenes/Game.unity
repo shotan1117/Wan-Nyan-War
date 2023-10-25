@@ -829,7 +829,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.3
+  m_Volume: 0.748
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -2803,6 +2803,26 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1501478452528767407, guid: dc8c2427d4e766843b3b93ad9de149ba, type: 3}
   m_PrefabInstance: {fileID: 431242367}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &433227055 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3172080221607963766, guid: 3ed941fb7986ef043a491dbacaf079aa, type: 3}
+  m_PrefabInstance: {fileID: 1942058355}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &433227060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 433227055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0.3584906, g: 0.11531691, b: 0.05242079, a: 0.5}
+  m_EffectDistance: {x: 2, y: 2}
+  m_UseGraphicAlpha: 0
 --- !u!1 &475589843 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3758471722911162094, guid: 6f1a788f1e6845040baec7341730366b, type: 3}
@@ -31589,6 +31609,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2898867783826502898, guid: 3ed941fb7986ef043a491dbacaf079aa, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 4097077944197755779, guid: 3ed941fb7986ef043a491dbacaf079aa, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -31599,15 +31623,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4820226471064550545, guid: 3ed941fb7986ef043a491dbacaf079aa, type: 3}
       propertyPath: m_Color.b
-      value: 0.28602478
+      value: 0.3982597
       objectReference: {fileID: 0}
     - target: {fileID: 4820226471064550545, guid: 3ed941fb7986ef043a491dbacaf079aa, type: 3}
       propertyPath: m_Color.g
-      value: 0.19450872
+      value: 0.3066038
       objectReference: {fileID: 0}
     - target: {fileID: 4820226471064550545, guid: 3ed941fb7986ef043a491dbacaf079aa, type: 3}
       propertyPath: m_Color.r
-      value: 0.8773585
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4820226471064550545, guid: 3ed941fb7986ef043a491dbacaf079aa, type: 3}
       propertyPath: m_FontData.m_FontStyle
@@ -31615,19 +31639,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5019260375273535509, guid: 3ed941fb7986ef043a491dbacaf079aa, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1900
+      value: 1911.1
       objectReference: {fileID: 0}
     - target: {fileID: 5019260375273535509, guid: 3ed941fb7986ef043a491dbacaf079aa, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 6.6500244
+      value: 978
+      objectReference: {fileID: 0}
+    - target: {fileID: 8126807183397190095, guid: 3ed941fb7986ef043a491dbacaf079aa, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 8638778616389195529, guid: 3ed941fb7986ef043a491dbacaf079aa, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 300
+      value: 264.2
       objectReference: {fileID: 0}
     - target: {fileID: 8638778616389195529, guid: 3ed941fb7986ef043a491dbacaf079aa, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 8.599976
+      value: 984.44
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1484195454625463197, guid: 3ed941fb7986ef043a491dbacaf079aa, type: 3}
@@ -31647,6 +31675,12 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 354723790}
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3172080221607963766, guid: 3ed941fb7986ef043a491dbacaf079aa, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 433227060}
+    - targetCorrespondingSourceObject: {fileID: 8846983437689765594, guid: 3ed941fb7986ef043a491dbacaf079aa, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1997714017}
     - targetCorrespondingSourceObject: {fileID: 1385537896423146736, guid: 3ed941fb7986ef043a491dbacaf079aa, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1994412186}
@@ -31907,7 +31941,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectColor: {r: 0.110137075, g: 0.7075472, b: 0.23837025, a: 0.5}
+  m_EffectDistance: {x: 3, y: 3}
+  m_UseGraphicAlpha: 1
+--- !u!1 &1997714012 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8846983437689765594, guid: 3ed941fb7986ef043a491dbacaf079aa, type: 3}
+  m_PrefabInstance: {fileID: 1942058355}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1997714017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1997714012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 1, g: 0.4575472, b: 0.578501, a: 0.5}
   m_EffectDistance: {x: 3, y: 3}
   m_UseGraphicAlpha: 1
 --- !u!1 &2001561797
@@ -32800,7 +32854,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   acc: {fileID: 8300000, guid: 4a9c8f16a967eab45a6896457171f6a3, type: 3}
-  beingHit: {fileID: 8300000, guid: 0411b110275c33941bc8ef37e93403f3, type: 3}
+  beingHit: {fileID: 8300000, guid: 9e38b980d792bfb41b1c0838b9075878, type: 3}
 --- !u!1001 &6311329785427873720
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32970,4 +33024,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   acc: {fileID: 8300000, guid: 4a9c8f16a967eab45a6896457171f6a3, type: 3}
-  beingHit: {fileID: 8300000, guid: 0411b110275c33941bc8ef37e93403f3, type: 3}
+  beingHit: {fileID: 8300000, guid: 9e38b980d792bfb41b1c0838b9075878, type: 3}
