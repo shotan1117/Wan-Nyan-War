@@ -6,6 +6,7 @@ public class coinSE : MonoBehaviour
 {
     AudioSource ass;
     public AudioClip acc;
+    public AudioClip beingHit;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +27,16 @@ public class coinSE : MonoBehaviour
             ass.PlayOneShot(acc);
         }
             
+      
        
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if(other.gameObject.tag=="enemy"||
+            other.gameObject.tag=="Shot")
+        {
+            ass.PlayOneShot(beingHit);
+        }
     }
 }

@@ -9,10 +9,14 @@ public class EnemyCheckHit : MonoBehaviour
     Animator animator;
 
     public GameObject coin;
+
+    public AudioClip beingHit;
+    AudioSource ass;
     
     // Start is called before the first frame update
     void Start()
     {
+        ass = GetComponent<AudioSource>();
         animator = GetComponent<Animator>();
     }
 
@@ -28,6 +32,8 @@ public class EnemyCheckHit : MonoBehaviour
         {
             if (other.gameObject.CompareTag("Shot"))
             {
+                ass.PlayOneShot(beingHit);
+
                 Vector3 v = transform.position + transform.up*5;
 
 
