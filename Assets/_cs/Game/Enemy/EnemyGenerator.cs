@@ -4,11 +4,6 @@ using UnityEngine;
 
 public class EnemyGenerator : MonoBehaviour
 {
-    public GameObject DogPBR;
-    private float span = 4.0f;
-    private float delta = 0;
-    private float timeCnt = 0;
-
     [SerializeField]
     [Tooltip("生成するGameObject")]
     private GameObject createPrefab;
@@ -18,42 +13,31 @@ public class EnemyGenerator : MonoBehaviour
     [SerializeField]
     [Tooltip("生成する範囲B")]
     private Transform rangeB;
-    [SerializeField]
-    [Tooltip("生成する範囲C")]
-    private Transform rangeC;
-    [SerializeField]
-    [Tooltip("生成する範囲D")]
-    private Transform rangeD;
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+   
+    // 経過時間
+    private float time;
 
     // Update is called once per frame
     void Update()
     {
-        if (DogPBR != null)
+        // 前フレームからの時間を加算していく
+        time = time + Time.deltaTime;
+
+        // 約2秒置きにランダムに生成されるようにする。
+        if (time > 2.0f)
         {
-            this.delta += Time.deltaTime;
-            this.timeCnt += Time.deltaTime;
-           
-            if (this.delta > this.span)
-            {
-                this.delta = 0;
-                float x = Random.Range(-10.0f, 0.0f);
-                float z = Random.Range(-32.0f, -35.5f);
-                Instantiate(DogPBR, new Vector3(x, 0.5f, z), DogPBR.transform.rotation);
-                float x1 = Random.Range(53.0f, 63.0f);
-                float z1 = Random.Range(15.0f, 18.5f);
-                Instantiate(DogPBR, new Vector3(x1, 0.5f, z1), DogPBR.transform.rotation);
-                float x2 = Random.Range(-25.0f, 89.0f);
-                float z2 = Random.Range(-3.4f, -10.0f);
-                Instantiate(DogPBR, new Vector3(x2, 0.5f, z2), DogPBR.transform.rotation);
-               
-            }
+            // rangeAとrangeBのx座標の範囲内でランダムな数値を作成
+            float x = Random.Range(rangeA.position.x, rangeB.position.x);
+            // rangeAとrangeBのy座標の範囲内でランダムな数値を作成
+            float y = Random.Range(rangeA.position.y, rangeB.position.y);
+            // rangeAとrangeBのz座標の範囲内でランダムな数値を作成
+            float z = Random.Range(rangeA.position.z, rangeB.position.z);
+
+            // GameObjectを上記で決まったランダムな場所に生成
+            Instantiate(createPrefab, new Vector3(x, y, z), createPrefab.transform.rotation);
+
+            // 経過時間リセット
+            time = 0f;
         }
     }
 }
