@@ -14,7 +14,15 @@ public class playerShot : MonoBehaviour
     private float Shottime;
     public float bomTime;
 
+    public AudioClip bonehit;
+    public AudioClip bombhit;
+    AudioSource ass;
     // Update is called once per frame
+
+    private void Start()
+    {
+        ass=GetComponent<AudioSource>();
+    }
     void Update()
     {
         
@@ -29,6 +37,8 @@ public class playerShot : MonoBehaviour
                 {
                     Shot.GetComponent<killenemybone>().from = playerNo;
                     Instantiate(Shot, transform.position , Quaternion.identity);
+
+                    ass.PlayOneShot(bonehit);
                     Shottime = 0;
                 }
             }
@@ -37,6 +47,8 @@ public class playerShot : MonoBehaviour
                 if (bomTime >= 10)
                 {
                     Instantiate(ShotBom, transform.position + transform.forward *2, Quaternion.identity);
+
+                    ass.PlayOneShot(bombhit); 
                     bomTime = 0;
                 }
                 
