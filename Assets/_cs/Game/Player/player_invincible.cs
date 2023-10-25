@@ -66,7 +66,7 @@ public class player_invincible : MonoBehaviour
         }
         for (int i = 0; i < coinGenerate; i++)
         {
-            Vector3 v = transform.position;
+            Vector3 v = transform.position+Vector3.up*0.5f;
             GameObject coinn = Instantiate(coin, v, Quaternion.identity);
             coinn.transform.Rotate(new Vector3(67.941f, 188.771f, 0.638f));
         }
