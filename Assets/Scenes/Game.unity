@@ -35792,7 +35792,7 @@ PrefabInstance:
       objectReference: {fileID: 1275759175}
     - target: {fileID: 8511301434121171626, guid: 568ff86778230214fa50bb92167ae6a6, type: 3}
       propertyPath: playersiderotate
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 9160172272222510093, guid: 568ff86778230214fa50bb92167ae6a6, type: 3}
       propertyPath: coin
@@ -35941,7 +35941,7 @@ PrefabInstance:
       objectReference: {fileID: 599438442}
     - target: {fileID: 7647084380034678992, guid: 3c2580e6c12d41545824c64232d049ee, type: 3}
       propertyPath: playersiderotate
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
